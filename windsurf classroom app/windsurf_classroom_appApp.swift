@@ -6,27 +6,16 @@
 //
 
 import SwiftUI
-import SwiftData
 
 @main
-struct windsurf_classroom_appApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+struct WindsurfClassroomApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var authViewModel = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppRouter()
+                .environmentObject(authViewModel)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

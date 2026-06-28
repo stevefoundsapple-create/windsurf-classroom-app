@@ -1,0 +1,469 @@
+{
+  "" : {
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf classroom app-primary.dia",
+    "emit-module-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf classroom app-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf classroom app-primary-emit-module.dia",
+    "pch" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf classroom app-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf classroom app-primary.swiftdeps"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/AppDelegate.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppDelegate.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppDelegate.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppDelegate.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppDelegate.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppDelegate.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/AppRouter.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppRouter.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppRouter.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppRouter.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppRouter.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppRouter.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppRouter.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppRouter.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AppRouter~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Config/SupabaseConfig.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseConfig.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseConfig.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseConfig.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseConfig.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseConfig.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseConfig.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseConfig.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseConfig~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Models/BehaviorCategory.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorCategory.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorCategory.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorCategory.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorCategory.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorCategory.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorCategory.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorCategory.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorCategory~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Models/BehaviorEvent.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorEvent.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorEvent.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorEvent.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorEvent.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorEvent.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorEvent.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorEvent.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorEvent~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Models/Class.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Class.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Class.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Class.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Class.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Class.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Class.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Class.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Class~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Models/FeedFilter.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/FeedFilter.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/FeedFilter.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/FeedFilter.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/FeedFilter.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/FeedFilter.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/FeedFilter.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/FeedFilter.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/FeedFilter~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Models/Student.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Student.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Student.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Student.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Student.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Student.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Student.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Student.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Student~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Models/Todo.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Todo.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Todo.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Todo.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Todo.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Todo.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Todo.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Todo.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Todo~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Models/UserProfile.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/UserProfile.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/UserProfile.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/UserProfile.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/UserProfile.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/UserProfile.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/UserProfile.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/UserProfile.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/UserProfile~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Services/AuthService.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthService.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthService.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthService.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthService.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthService.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthService.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthService.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthService~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Services/BehaviorService.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorService.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorService.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorService.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorService.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorService.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorService.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorService.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/BehaviorService~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Services/CategoryService.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/CategoryService.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/CategoryService.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/CategoryService.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/CategoryService.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/CategoryService.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/CategoryService.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/CategoryService.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/CategoryService~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Services/NotificationService.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/NotificationService.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/NotificationService.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/NotificationService.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/NotificationService.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/NotificationService.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/NotificationService.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/NotificationService.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/NotificationService~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Services/StudentService.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentService.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentService.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentService.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentService.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentService.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentService.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentService.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentService~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Services/Supabase.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Supabase.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Supabase.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Supabase.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Supabase.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Supabase.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Supabase.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Supabase.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/Supabase~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Services/SupabaseService.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseService.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseService.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseService.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseService.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseService.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseService.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseService.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/SupabaseService~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Parent/LinkChildViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Parent/ParentFeedViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Parent/ParentReportsViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Parent/ParentSettingsViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Shared/AuthViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AuthViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Student/StudentHomeViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Student/StudentSetupViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Teacher/ClassDashboardViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Teacher/ClassSetupViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Teacher/LogBehaviorViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/ViewModels/Teacher/StudentProfileViewModel.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileViewModel.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileViewModel.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileViewModel.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileViewModel.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileViewModel.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileViewModel.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileViewModel.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileViewModel~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Parent/LinkChildView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LinkChildView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Parent/ParentFeedView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentFeedView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Parent/ParentHomeView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentHomeView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentHomeView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentHomeView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentHomeView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentHomeView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentHomeView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentHomeView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentHomeView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Parent/ParentReportsView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentReportsView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Parent/ParentSettingsView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ParentSettingsView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Shared/ContentView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ContentView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ContentView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ContentView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ContentView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Shared/ErrorStateView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ErrorStateView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ErrorStateView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ErrorStateView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ErrorStateView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ErrorStateView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ErrorStateView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ErrorStateView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ErrorStateView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Shared/LoginView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LoginView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LoginView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LoginView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LoginView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LoginView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LoginView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LoginView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LoginView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Student/StudentHomeView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentHomeView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Student/StudentSetupView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentSetupView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Teacher/AddStudentSheet.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AddStudentSheet.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AddStudentSheet.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AddStudentSheet.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AddStudentSheet.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AddStudentSheet.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AddStudentSheet.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AddStudentSheet.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/AddStudentSheet~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Teacher/ClassDashboardView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassDashboardView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Teacher/ClassSetupView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/ClassSetupView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Teacher/LogBehaviorSheet.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorSheet.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorSheet.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorSheet.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorSheet.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorSheet.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorSheet.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorSheet.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/LogBehaviorSheet~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Teacher/StudentProfileView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/StudentProfileView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/Views/Teacher/TeacherSettingsView.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/TeacherSettingsView.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/TeacherSettingsView.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/TeacherSettingsView.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/TeacherSettingsView.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/TeacherSettingsView.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/TeacherSettingsView.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/TeacherSettingsView.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/TeacherSettingsView~partial.swiftmodule"
+  },
+  "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/windsurf classroom app/windsurf_classroom_appApp.swift" : {
+    "const-values" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf_classroom_appApp.swiftconstvalues",
+    "dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf_classroom_appApp.d",
+    "diagnostics" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf_classroom_appApp.dia",
+    "index-unit-output-path" : "/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf_classroom_appApp.o",
+    "llvm-bc" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf_classroom_appApp.bc",
+    "object" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf_classroom_appApp.o",
+    "swift-dependencies" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf_classroom_appApp.swiftdeps",
+    "swiftmodule" : "/Users/maxmokrane/windsurf classroom app copy/windsurf classroom app/build/windsurf classroom app.build/Debug-iphonesimulator/windsurf classroom app.build/Objects-normal/x86_64/windsurf_classroom_appApp~partial.swiftmodule"
+  }
+}
