@@ -11,12 +11,16 @@ import os.log
 
 @MainActor
 class ParentReportsViewModel: ObservableObject {
-    private let supabaseService = SupabaseService.shared
+    private let supabaseService: SupabaseServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "ParentReports")
     
     @Published var child: Student?
     @Published var isLoading: Bool = true
     @Published var errorMessage: String?
+    
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.supabaseService = supabaseService
+    }
     @Published var weeklyPointTotal: Int = 0
     @Published var weeklyPositiveEvents: Int = 0
     @Published var weeklyNegativeEvents: Int = 0

@@ -12,7 +12,7 @@ import os.log
 
 @MainActor
 class ParentFeedViewModel: ObservableObject {
-    private let supabaseService = SupabaseService.shared
+    private let supabaseService: SupabaseServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "ParentFeed")
     
     @Published var events: [BehaviorEvent] = []
@@ -21,6 +21,13 @@ class ParentFeedViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var newEventIds: Set<UUID> = []
     private var lastOpenedAt: Date?
+    
+    private var realtimeChannel: RealtimeChannelV2?
+    private var realtimeSubscription: RealtimeSubscription?
+    
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.supabaseService = supabaseService
+    }
     
     /// Fetches the child linked to the parent and their behavior events
     func fetchChildAndEvents(parentId: UUID) async {
@@ -66,14 +73,73 @@ class ParentFeedViewModel: ObservableObject {
     
     /// Subscribes to realtime updates for the child's behavior events
     func subscribeToRealtime(studentId: UUID) {
-        // TODO: Implement with correct supabase-swift v2 Realtime API
-        logger.info("Realtime subscription requested for student: \(studentId)")
+        logger.info("Subscribing to realtime updates for student: \(studentId)")
+        
+        let channelName = "parent_\(studentId.uuidString)"
+        realtimeChannel = supabaseService.realtime.channel(channelName)
+        
+        guard let channel = realtimeChannel else {
+            logger.error("Failed to create realtime channel")
+            return
+        }
+        
+        let filter = "student_id=eq.\(studentId.uuidString)"
+        realtimeSubscription = channel.onPostgresChange(
+            InsertAction.self,
+            schema: "public",
+            table: "behavior_events",
+            filter: filter
+        ) { [weak self] change in
+            guard let self = self else { return }
+            Task { @MainActor in
+                self.handleNewEvent(change.record)
+            }
+        }
+        
+        Task {
+            do {
+                try await channel.subscribeWithError()
+                logger.info("Realtime subscription successful for student: \(studentId)")
+            } catch {
+                logger.error("Failed to subscribe to realtime: \(error.localizedDescription)")
+            }
+        }
     }
     
     /// Unsubscribes from realtime updates
     func unsubscribeFromRealtime() {
-        // TODO: Implement with correct supabase-swift v2 Realtime API
-        logger.info("Realtime unsubscription requested")
+        logger.info("Unsubscribing from realtime updates")
+        
+        Task {
+            if let subscription = realtimeSubscription {
+                subscription.cancel()
+                realtimeSubscription = nil
+            }
+            
+            if let channel = realtimeChannel {
+                await channel.unsubscribe()
+                realtimeChannel = nil
+            }
+            
+            logger.info("Realtime unsubscription complete")
+        }
+    }
+    
+    /// Handles a new behavior event received from realtime
+    private func handleNewEvent(_ record: [String: Any]) {
+        logger.info("Received new event from realtime")
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: record)
+            let newEvent = try JSONDecoder().decode(BehaviorEvent.self, from: jsonData)
+            
+            events.insert(newEvent, at: 0)
+            newEventIds.insert(newEvent.id)
+            
+            logger.info("Successfully processed new event: \(newEvent.category)")
+        } catch {
+            logger.error("Failed to decode realtime event: \(error.localizedDescription)")
+        }
     }
     
     /// Calculates today's net point total

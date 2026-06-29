@@ -12,8 +12,8 @@ import os.log
 
 @MainActor
 class ClassDashboardViewModel: ObservableObject {
-    private let studentService = StudentService()
-    private let supabaseService = SupabaseService.shared
+    private let studentService: StudentServiceProtocol
+    private let supabaseService: SupabaseServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "ClassDashboard")
     
     @Published var students: [Student] = []
@@ -25,7 +25,9 @@ class ClassDashboardViewModel: ObservableObject {
     private var classId: UUID?
     private var teacherId: UUID?
     
-    init(classId: UUID?, teacherId: UUID? = nil) {
+    init(classId: UUID?, teacherId: UUID? = nil, studentService: StudentServiceProtocol = StudentService(), supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.studentService = studentService
+        self.supabaseService = supabaseService
         self.classId = classId
         self.teacherId = teacherId
         // Only fetch students if we have a valid classId

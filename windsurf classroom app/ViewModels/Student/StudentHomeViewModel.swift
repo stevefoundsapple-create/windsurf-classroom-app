@@ -12,12 +12,16 @@ import os.log
 
 @MainActor
 class StudentHomeViewModel: ObservableObject {
-    private let supabaseService = SupabaseService.shared
+    private let supabaseService: SupabaseServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "StudentHome")
     
     private var realtimeChannel: RealtimeChannelV2?
     private var realtimeSubscription: RealtimeSubscription?
     internal var currentStudentId: UUID?
+    
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.supabaseService = supabaseService
+    }
     
     @Published var events: [BehaviorEvent] = []
     @Published var pointTotal: Int = 0

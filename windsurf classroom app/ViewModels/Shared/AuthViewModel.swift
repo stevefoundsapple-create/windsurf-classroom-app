@@ -13,14 +13,15 @@ import Supabase
 
 @MainActor
 class AuthViewModel: ObservableObject {
-    private let authService = AuthService()
+    private let authService: AuthServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "Auth")
     
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     @Published var currentUser: UserProfile?
     
-    init() {
+    init(authService: AuthServiceProtocol = AuthService()) {
+        self.authService = authService
         checkExistingSession()
     }
     
@@ -40,6 +41,7 @@ class AuthViewModel: ObservableObject {
             // Register for push notifications if user is a parent
             if profile.role == .parent {
                 await NotificationService.shared.registerForPushNotifications()
+                UserDefaults.standard.set(userId.uuidString, forKey: "cachedParentId")
             }
         } catch let error as Auth.AuthError {
             logger.error("Auth error during sign in: \(error.localizedDescription)")
@@ -83,6 +85,7 @@ class AuthViewModel: ObservableObject {
                 // Register for push notifications if user is a parent
                 if profile.role == .parent {
                     await NotificationService.shared.registerForPushNotifications()
+                    UserDefaults.standard.set(userId.uuidString, forKey: "cachedParentId")
                 }
             } catch Auth.AuthError.sessionMissing {
                 // No active session - user needs to log in, this is expected

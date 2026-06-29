@@ -47,6 +47,18 @@ iOS SwiftUI app (MVVM) + Supabase backend for real-time classroom behavior track
 
 Every screen handles 4 states explicitly: **needsSetup** (student flow only), **Loading** (skeleton views, no spinners), **Error** (`ErrorStateView` with retry button), **Empty** (contextual message + CTA). Optimistic UI only on `LogBehaviorSheet` — update point total instantly, roll back on failure.
 
+## CLI diagnostics
+
+These are the recommended CLI tools for on-demand diagnostics (more reliable than LSP for this project):
+
+| Tool | Install | Command |
+|---|---|---|
+| **xcodebuild** | (bundled with Xcode) | `xcodebuild -project "windsurf classroom app.xcodeproj" -scheme "windsurf classroom app" build 2>&1 \| tail -20` |
+| **swiftlint** | `brew install swiftlint` | `swiftlint` |
+| **swift test** | (bundled with Xcode) | `xcodebuild -project "windsurf classroom app.xcodeproj" -scheme "windsurf classroom app" -destination 'platform=iOS Simulator,name=iPhone 16' test 2>&1` |
+
+Before making changes, run `swiftlint` (if installed) to check style issues. After making changes, run the xcodebuild command above to verify compilation.
+
 ## Testing
 
 - Unit tests use Apple's **Swift Testing** framework (`#expect`, `@Test`)

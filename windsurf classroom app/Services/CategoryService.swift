@@ -7,8 +7,12 @@
 
 import Foundation
 
-class CategoryService {
-    private let supabaseService = SupabaseService.shared
+class CategoryService: CategoryServiceProtocol {
+    private let supabaseService: SupabaseServiceProtocol
+    
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.supabaseService = supabaseService
+    }
     
     func fetchCategories(classId: UUID) async throws -> [BehaviorCategory] {
         do {

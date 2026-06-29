@@ -38,6 +38,7 @@ struct ParentFeedView: View {
         }
         .task {
             if let parentId = authViewModel.currentUser?.id {
+                UserDefaults.standard.set(parentId.uuidString, forKey: "cachedParentId")
                 await viewModel.fetchChildAndEvents(parentId: parentId)
                 if let child = viewModel.child {
                     viewModel.subscribeToRealtime(studentId: child.id)

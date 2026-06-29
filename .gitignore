@@ -1,0 +1,20 @@
+# Xcode
+build/
+*.xcuserdata
+*.xcworkspace/xcuserdata
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# macOS
+.DS_Store
+
+# Secrets
+Config/SupabaseConfig.swift
+Config/SentryConfig.swift
+
+# Swift Package Manager
+.package.resolved
+*.build/

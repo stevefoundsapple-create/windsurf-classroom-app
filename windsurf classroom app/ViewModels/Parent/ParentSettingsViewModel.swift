@@ -11,13 +11,17 @@ import os.log
 
 @MainActor
 class ParentSettingsViewModel: ObservableObject {
-    private let supabaseService = SupabaseService.shared
+    private let supabaseService: SupabaseServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "ParentSettings")
     
     @Published var children: [Student] = []
     @Published var notificationPreferences: NotificationPreferences?
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
+    
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.supabaseService = supabaseService
+    }
     
     /// Fetches all children linked to the parent
     func fetchChildren(parentId: UUID) async {
@@ -99,6 +103,25 @@ class ParentSettingsViewModel: ObservableObject {
         isLoading = false
     }
     
+    /// Deletes the parent account and all associated data
+    func deleteAccount(userId: UUID) async throws {
+        isLoading = true
+        errorMessage = nil
+
+        do {
+            try await supabaseService.deleteAccount(userId: userId)
+            try await supabaseService.signOut()
+            logger.info("Account deleted successfully for user: \(userId)")
+        } catch {
+            logger.error("Failed to delete account: \(error.localizedDescription)")
+            errorMessage = "Unable to delete account. Please try again."
+            isLoading = false
+            throw error
+        }
+
+        isLoading = false
+    }
+
     /// Updates a specific notification preference
     func updatePreference(_ keyPath: WritableKeyPath<NotificationPreferences, Bool>, value: Bool) async {
         guard var preferences = notificationPreferences else { return }

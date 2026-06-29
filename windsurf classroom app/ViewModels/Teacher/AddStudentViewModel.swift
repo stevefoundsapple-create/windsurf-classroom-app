@@ -11,7 +11,7 @@ import os.log
 
 @MainActor
 class AddStudentViewModel: ObservableObject {
-    private let studentService = StudentService()
+    private let studentService: StudentServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "AddStudent")
     
     @Published var studentName: String = ""
@@ -20,8 +20,9 @@ class AddStudentViewModel: ObservableObject {
     
     let classId: UUID
     
-    init(classId: UUID) {
+    init(classId: UUID, studentService: StudentServiceProtocol = StudentService()) {
         self.classId = classId
+        self.studentService = studentService
     }
     
     var canSubmit: Bool {

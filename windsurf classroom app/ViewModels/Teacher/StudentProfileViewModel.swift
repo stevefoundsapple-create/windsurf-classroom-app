@@ -10,7 +10,7 @@ import Combine
 
 @MainActor
 class StudentProfileViewModel: ObservableObject {
-    private let behaviorService = BehaviorService()
+    private let behaviorService: BehaviorServiceProtocol
     
     @Published var events: [BehaviorEvent] = []
     @Published var filter: FeedFilter = .today
@@ -20,8 +20,9 @@ class StudentProfileViewModel: ObservableObject {
     
     private let student: Student
     
-    init(student: Student) {
+    init(student: Student, behaviorService: BehaviorServiceProtocol = BehaviorService()) {
         self.student = student
+        self.behaviorService = behaviorService
         fetchEvents()
     }
     

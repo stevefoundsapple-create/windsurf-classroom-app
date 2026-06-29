@@ -12,7 +12,7 @@ import os.log
 
 @MainActor
 class StudentSetupViewModel: ObservableObject {
-    private let supabaseService = SupabaseService.shared
+    private let supabaseService: SupabaseServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "StudentSetup")
     
     @Published var name: String = ""
@@ -20,6 +20,10 @@ class StudentSetupViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     @Published var isComplete: Bool = false
+    
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.supabaseService = supabaseService
+    }
     
     var canSubmit: Bool {
         !name.trimmingCharacters(in: .whitespaces).isEmpty &&

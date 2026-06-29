@@ -11,8 +11,8 @@ import os.log
 
 @MainActor
 class LogBehaviorViewModel: ObservableObject {
-    private let behaviorService = BehaviorService()
-    private let categoryService = CategoryService()
+    private let behaviorService: BehaviorServiceProtocol
+    private let categoryService: CategoryServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "LogBehavior")
     
     @Published var categories: [BehaviorCategory] = []
@@ -30,9 +30,11 @@ class LogBehaviorViewModel: ObservableObject {
     // Callback for optimistic UI updates
     var onOptimisticUpdate: ((UUID, Int) -> Void)?
     
-    init(teacherId: UUID, classId: UUID) {
+    init(teacherId: UUID, classId: UUID, behaviorService: BehaviorServiceProtocol = BehaviorService(), categoryService: CategoryServiceProtocol = CategoryService()) {
         self.teacherId = teacherId
         self.classId = classId
+        self.behaviorService = behaviorService
+        self.categoryService = categoryService
         fetchCategories()
     }
     

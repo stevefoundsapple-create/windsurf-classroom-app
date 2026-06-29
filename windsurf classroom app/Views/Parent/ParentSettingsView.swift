@@ -60,10 +60,29 @@ struct ParentSettingsView: View {
         .alert("Delete Account", isPresented: $showingDeleteAccountAlert) {
             Button("Cancel", role: .cancel) {}
             Button("Delete", role: .destructive) {
-                // TODO: Implement account deletion
+                Task {
+                    if let userId = authViewModel.currentUser?.id {
+                        do {
+                            try await viewModel.deleteAccount(userId: userId)
+                            await authViewModel.logout()
+                        } catch {
+                            // Error message is set in the ViewModel
+                        }
+                    }
+                }
             }
         } message: {
             Text("This will permanently delete your account and all associated data. This action cannot be undone.")
+        }
+        .alert("Error", isPresented: Binding(
+            get: { viewModel.errorMessage != nil },
+            set: { if !$0 { viewModel.errorMessage = nil } }
+        )) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            if let error = viewModel.errorMessage {
+                Text(error)
+            }
         }
         .sheet(isPresented: $showingLinkChildSheet) {
             LinkChildView {
@@ -335,7 +354,9 @@ struct ParentSettingsView: View {
     private var supportSection: some View {
         Section("Support") {
             Button(action: {
-                // TODO: Open email or support page
+                if let url = URL(string: "mailto:support@classroomapp.com") {
+                    UIApplication.shared.open(url)
+                }
             }) {
                 HStack {
                     Image(systemName: "envelope.fill")
@@ -346,12 +367,18 @@ struct ParentSettingsView: View {
                         .foregroundColor(.primary)
                     
                     Spacer()
+                    
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                 }
                 .padding(.vertical, 4)
             }
             
             Button(action: {
-                // TODO: Open privacy policy
+                if let url = URL(string: "https://classroomapp.com/privacy") {
+                    UIApplication.shared.open(url)
+                }
             }) {
                 HStack {
                     Image(systemName: "shield.fill")
@@ -362,12 +389,18 @@ struct ParentSettingsView: View {
                         .foregroundColor(.primary)
                     
                     Spacer()
+                    
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                 }
                 .padding(.vertical, 4)
             }
             
             Button(action: {
-                // TODO: Open terms of service
+                if let url = URL(string: "https://classroomapp.com/terms") {
+                    UIApplication.shared.open(url)
+                }
             }) {
                 HStack {
                     Image(systemName: "doc.text.fill")
@@ -378,6 +411,10 @@ struct ParentSettingsView: View {
                         .foregroundColor(.primary)
                     
                     Spacer()
+                    
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                 }
                 .padding(.vertical, 4)
             }

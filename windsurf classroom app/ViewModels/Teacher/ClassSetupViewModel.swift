@@ -12,13 +12,22 @@ import os.log
 
 @MainActor
 class ClassSetupViewModel: ObservableObject {
-    private let supabaseService = SupabaseService.shared
+    private let supabaseService: SupabaseServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "ClassSetup")
     
     @Published var className: String = ""
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     @Published var generatedClassCode: String?
+    private var teacherId: UUID?
+    
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.supabaseService = supabaseService
+    }
+    
+    func setTeacherId(_ id: UUID) {
+        teacherId = id
+    }
     
     var canSubmit: Bool {
         !className.trimmingCharacters(in: .whitespaces).isEmpty && !isLoading
@@ -46,18 +55,21 @@ class ClassSetupViewModel: ObservableObject {
             
             // Get the current authenticated user ID directly from auth session
             // This ensures it matches auth.uid() for the RLS policy
-            guard let session = try? await supabaseService.auth.session else {
+            let teacherId: UUID
+            if let storedTeacherId = self.teacherId {
+                teacherId = storedTeacherId
+            } else if let sessionUserId = try? await supabaseService.getCurrentSessionUserId() {
+                teacherId = sessionUserId
+            } else {
                 logger.error("No active session found when creating class")
                 errorMessage = "Authentication error. Please sign in again."
                 isLoading = false
                 return nil
             }
             
-            let teacherId = session.user.id
             let classCode = generateClassCode()
             
             logger.info("Session user ID: \(teacherId.uuidString.lowercased())")
-            logger.info("Auth user ID (from session): \(session.user.id.uuidString.lowercased())")
             
             let newClass = Class(
                 id: UUID(),

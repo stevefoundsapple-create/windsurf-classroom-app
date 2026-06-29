@@ -11,7 +11,7 @@ import os.log
 
 @MainActor
 class LinkChildViewModel: ObservableObject {
-    private let supabaseService = SupabaseService.shared
+    private let supabaseService: SupabaseServiceProtocol
     private let logger = Logger(subsystem: "ClassroomApp", category: "LinkChild")
     
     @Published var studentName: String = ""
@@ -23,6 +23,10 @@ class LinkChildViewModel: ObservableObject {
     @Published var successMessage: String?
     @Published var showConfirmation: Bool = false
     @Published var selectedStudent: Student?
+    
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.supabaseService = supabaseService
+    }
     
     /// Searches for students matching the entered name within a class
     func searchStudents() async {

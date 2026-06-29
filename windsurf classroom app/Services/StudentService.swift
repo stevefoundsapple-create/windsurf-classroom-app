@@ -7,9 +7,12 @@
 
 import Foundation
 
-@MainActor
-class StudentService {
-    private let supabaseService = SupabaseService.shared
+class StudentService: StudentServiceProtocol {
+    private let supabaseService: SupabaseServiceProtocol
+    
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+        self.supabaseService = supabaseService
+    }
     
     func fetchStudents(classId: UUID) async throws -> [Student] {
         return try await supabaseService.fetchStudents(classId: classId)

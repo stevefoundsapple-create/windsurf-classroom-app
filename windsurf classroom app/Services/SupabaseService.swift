@@ -8,7 +8,7 @@
 import Foundation
 import Supabase
 
-class SupabaseService {
+class SupabaseService: SupabaseServiceProtocol {
     static let shared = SupabaseService()
     
     private let client: SupabaseClient
@@ -31,6 +31,25 @@ class SupabaseService {
     /// Returns the new RealtimeClientV2 instance (RealtimeClient is deprecated)
     var realtime: RealtimeClientV2 {
         return client.realtimeV2
+    }
+    
+    // MARK: - Auth Operations
+    
+    func signIn(email: String, password: String) async throws -> Session {
+        return try await client.auth.signIn(email: email, password: password)
+    }
+    
+    func signOut() async throws {
+        try await client.auth.signOut()
+    }
+    
+    func getCurrentSession() async throws -> Session? {
+        return try await client.auth.session
+    }
+    
+    func getCurrentSessionUserId() async throws -> UUID? {
+        let session = try await client.auth.session
+        return session.user.id
     }
     
     // MARK: - Classes Table Operations
@@ -382,6 +401,43 @@ class SupabaseService {
         return students
     }
     
+    // MARK: - Push Notification Triggers
+
+    func triggerBehaviorNotification(eventId: UUID, studentId: UUID, category: String, isPositive: Bool, points: Int, note: String?) async throws {
+        struct NotificationPayload: Encodable {
+            let eventId: String
+            let studentId: String
+            let category: String
+            let isPositive: Bool
+            let points: Int
+            let note: String?
+        }
+
+        let payload = NotificationPayload(
+            eventId: eventId.uuidString,
+            studentId: studentId.uuidString,
+            category: category,
+            isPositive: isPositive,
+            points: points,
+            note: note
+        )
+
+        let options = FunctionInvokeOptions(
+            body: payload
+        )
+
+        try await client.functions.invoke("send-behavior-notification", options: options)
+    }
+
+    // MARK: - Account Deletion
+
+    func deleteAccount(userId: UUID) async throws {
+        let params = ["p_user_id": userId.uuidString.lowercased()]
+        try await client
+            .rpc("delete_user_account_secure", params: params)
+            .execute()
+    }
+
     // MARK: - Notification Preferences Table Operations
     
     /// Fetches notification preferences for a user

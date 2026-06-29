@@ -1,13 +1,19 @@
-//
-//  AppDelegate.swift
-//  windsurf classroom app
-//
-//  Created by Max Mokrane on 2026/05/01.
-//
-
 import UIKit
+import BackgroundTasks
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+    ) -> Bool {
+        CrashReporterService.start()
+        Task {
+            await BackgroundRefreshService.shared.registerBackgroundTask()
+            await BackgroundRefreshService.shared.scheduleAppRefresh()
+        }
+        return true
+    }
     
     func application(
         _ application: UIApplication,
