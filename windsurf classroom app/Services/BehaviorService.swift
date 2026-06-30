@@ -1,21 +1,16 @@
-//
-//  BehaviorService.swift
-//  windsurf classroom app
-//
-//  Created by Max Mokrane on 2026/05/01.
-//
-
 import Foundation
 import os.log
 
 class BehaviorService: BehaviorServiceProtocol {
     private let supabaseService: SupabaseServiceProtocol
     private let studentService: StudentServiceProtocol
+    private let cache: OfflineCacheService
     private let logger = Logger(subsystem: "ClassroomApp", category: "BehaviorService")
     
-    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared, studentService: StudentServiceProtocol = StudentService()) {
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared, studentService: StudentServiceProtocol = StudentService(), cache: OfflineCacheService = .shared) {
         self.supabaseService = supabaseService
         self.studentService = studentService
+        self.cache = cache
     }
     
     func logEvent(
@@ -28,7 +23,6 @@ class BehaviorService: BehaviorServiceProtocol {
     ) async throws {
         logger.info("Starting logEvent - studentId: \(studentId), teacherId: \(teacherId), points: \(points)")
         
-        // Create the behavior event
         let event = BehaviorEvent(
             id: UUID(),
             studentId: studentId,
@@ -40,12 +34,10 @@ class BehaviorService: BehaviorServiceProtocol {
             createdAt: Date()
         )
         
-        // Log the event
         logger.info("Logging behavior event to database")
         try await supabaseService.logBehaviorEvent(event)
         logger.info("Successfully logged behavior event")
         
-        // Update student's point total
         logger.info("Fetching student to update points")
         let student = try await supabaseService.fetchStudent(id: studentId)
         let newTotal = student.pointTotal + points
@@ -53,9 +45,6 @@ class BehaviorService: BehaviorServiceProtocol {
         try await supabaseService.updateStudentPoints(studentId: studentId, newTotal: newTotal)
         logger.info("Successfully updated student points")
         
-        // Trigger push notification to parent via Edge Function
-        // This sends the event data to the "send-behavior-notification" Edge Function,
-        // which looks up the student's parent and delivers the push notification.
         do {
             try await supabaseService.triggerBehaviorNotification(
                 eventId: event.id,
@@ -67,16 +56,48 @@ class BehaviorService: BehaviorServiceProtocol {
             )
             logger.info("Successfully triggered notification for event: \(event.id)")
         } catch {
-            // Don't fail the entire operation if notification fails
             logger.error("Failed to trigger notification: \(error.localizedDescription)")
         }
+        
+        cache.invalidate(key: "events_\(studentId)")
+        cache.invalidate(key: "student_\(studentId)")
     }
     
     func fetchEvents(for studentId: UUID, limit: Int = 50) async throws -> [BehaviorEvent] {
-        return try await supabaseService.fetchBehaviorEvents(studentId: studentId, limit: limit)
+        let key = "events_\(studentId)_\(limit)"
+        
+        if let cached: [BehaviorEvent] = cache.fetch([BehaviorEvent].self, key: key) {
+            return cached
+        }
+        
+        do {
+            let events = try await supabaseService.fetchBehaviorEvents(studentId: studentId, limit: limit)
+            cache.cache(events, key: key)
+            return events
+        } catch {
+            if let cached: [BehaviorEvent] = cache.fetch([BehaviorEvent].self, key: key) {
+                return cached
+            }
+            throw error
+        }
     }
     
     func fetchEventsForClass(classId: UUID, limit: Int = 100) async throws -> [BehaviorEvent] {
-        return try await supabaseService.fetchBehaviorEventsForClass(classId: classId, limit: limit)
+        let key = "events_class_\(classId)_\(limit)"
+        
+        if let cached: [BehaviorEvent] = cache.fetch([BehaviorEvent].self, key: key) {
+            return cached
+        }
+        
+        do {
+            let events = try await supabaseService.fetchBehaviorEventsForClass(classId: classId, limit: limit)
+            cache.cache(events, key: key)
+            return events
+        } catch {
+            if let cached: [BehaviorEvent] = cache.fetch([BehaviorEvent].self, key: key) {
+                return cached
+            }
+            throw error
+        }
     }
 }

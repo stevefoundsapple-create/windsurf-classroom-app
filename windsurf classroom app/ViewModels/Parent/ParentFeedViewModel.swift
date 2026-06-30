@@ -25,7 +25,7 @@ class ParentFeedViewModel: ObservableObject {
     private var realtimeChannel: RealtimeChannelV2?
     private var realtimeSubscription: RealtimeSubscription?
     
-    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+    init(supabaseService: SupabaseServiceProtocol = ServiceFactory.makeSupabaseService()) {
         self.supabaseService = supabaseService
     }
     
@@ -60,7 +60,7 @@ class ParentFeedViewModel: ObservableObject {
         } catch {
             logger.error("Failed to fetch child and events: \(error.localizedDescription)")
             // Provide user-friendly error message without exposing raw Supabase errors
-            errorMessage = "Unable to load your child's data. Please check your connection and try again."
+            errorMessage = "Unable to load your child's data. Please check your connection and try again.".localized()
         }
         
         isLoading = false

@@ -19,7 +19,7 @@ class StudentHomeViewModel: ObservableObject {
     private var realtimeSubscription: RealtimeSubscription?
     internal var currentStudentId: UUID?
     
-    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+    init(supabaseService: SupabaseServiceProtocol = ServiceFactory.makeSupabaseService()) {
         self.supabaseService = supabaseService
     }
     
@@ -58,7 +58,7 @@ class StudentHomeViewModel: ObservableObject {
         } catch {
             logger.error("Failed to fetch events: \(error.localizedDescription)")
             // Provide user-friendly error message without exposing raw Supabase errors
-            errorMessage = "Unable to load your data. Please check your connection and try again."
+            errorMessage = "Unable to load your data. Please check your connection and try again.".localized()
         }
         
         isLoading = false
