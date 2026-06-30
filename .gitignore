@@ -18,3 +18,5 @@ Config/SentryConfig.swift
 # Swift Package Manager
 .package.resolved
 *.build/
+
+.sentryclirc
