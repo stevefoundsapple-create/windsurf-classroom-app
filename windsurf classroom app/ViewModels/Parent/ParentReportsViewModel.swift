@@ -18,7 +18,7 @@ class ParentReportsViewModel: ObservableObject {
     @Published var isLoading: Bool = true
     @Published var errorMessage: String?
     
-    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+    init(supabaseService: SupabaseServiceProtocol = ServiceFactory.makeSupabaseService()) {
         self.supabaseService = supabaseService
     }
     @Published var weeklyPointTotal: Int = 0
@@ -55,7 +55,7 @@ class ParentReportsViewModel: ObservableObject {
             
         } catch {
             logger.error("Failed to fetch reports: \(error.localizedDescription)")
-            errorMessage = "Unable to load reports. Please check your connection and try again."
+            errorMessage = "Unable to load reports. Please check your connection and try again.".localized()
         }
         
         isLoading = false

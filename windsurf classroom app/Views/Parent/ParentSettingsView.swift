@@ -151,6 +151,8 @@ struct ParentSettingsView: View {
                         .foregroundColor(.red)
                 }
             }
+            .accessibilityIdentifier("settings-log-out-button")
+            .accessibilityLabel("Log out")
         }
     }
     
@@ -182,8 +184,11 @@ struct ParentSettingsView: View {
                             .foregroundColor(.red)
                             .font(.title3)
                     }
+                    .accessibilityLabel("Unlink \(child.name)")
+                    .accessibilityHint("Removes the link to this child")
                 }
                 .padding(.vertical, 4)
+                .accessibilityLabel("\(child.name), student")
             }
             
             if viewModel.children.count == 1 {
@@ -224,6 +229,8 @@ struct ParentSettingsView: View {
                 }
                 .padding(.vertical, 4)
             }
+            .accessibilityLabel("Link your child")
+            .accessibilityIdentifier("settings-link-child-button")
         }
     }
     
@@ -255,6 +262,7 @@ struct ParentSettingsView: View {
                     }
                 }
                 .padding(.vertical, 4)
+                .accessibilityLabel("Positive Behaviors")
                 
                 Toggle(isOn: Binding(
                     get: { preferences.negativeBehaviors },
@@ -281,6 +289,7 @@ struct ParentSettingsView: View {
                     }
                 }
                 .padding(.vertical, 4)
+                .accessibilityLabel("Negative Behaviors")
                 
                 Toggle(isOn: Binding(
                     get: { preferences.weeklySummaries },
@@ -307,6 +316,7 @@ struct ParentSettingsView: View {
                     }
                 }
                 .padding(.vertical, 4)
+                .accessibilityLabel("Weekly Summaries")
                 
                 Toggle(isOn: Binding(
                     get: { preferences.quietHoursEnabled },
@@ -339,6 +349,7 @@ struct ParentSettingsView: View {
                     }
                 }
                 .padding(.vertical, 4)
+                .accessibilityLabel("Quiet Hours")
             } else {
                 HStack {
                     ProgressView()
@@ -374,6 +385,8 @@ struct ParentSettingsView: View {
                 }
                 .padding(.vertical, 4)
             }
+            .accessibilityLabel("Contact support")
+            .accessibilityIdentifier("settings-contact-support")
             
             Button(action: {
                 if let url = URL(string: "https://classroomapp.com/privacy") {
@@ -396,6 +409,8 @@ struct ParentSettingsView: View {
                 }
                 .padding(.vertical, 4)
             }
+            .accessibilityLabel("Privacy policy")
+            .accessibilityIdentifier("settings-privacy-policy")
             
             Button(action: {
                 if let url = URL(string: "https://classroomapp.com/terms") {
@@ -418,27 +433,32 @@ struct ParentSettingsView: View {
                 }
                 .padding(.vertical, 4)
             }
+            .accessibilityIdentifier("settings-terms")
+            .accessibilityLabel("Terms of service")
         }
     }
     
     private var dangerZoneSection: some View {
         Section {
-            Button(action: {
-                showingDeleteAccountAlert = true
-            }) {
-                HStack {
-                    Image(systemName: "trash.fill")
-                        .foregroundColor(.red)
-                        .font(.title2)
-                    
-                    Text("Delete Account")
-                        .foregroundColor(.red)
-                        .fontWeight(.medium)
-                    
-                    Spacer()
+                Button(action: {
+                    showingDeleteAccountAlert = true
+                }) {
+                    HStack {
+                        Image(systemName: "trash.fill")
+                            .foregroundColor(.red)
+                            .font(.title2)
+                        
+                        Text("Delete Account")
+                            .foregroundColor(.red)
+                            .fontWeight(.medium)
+                        
+                        Spacer()
+                    }
+                    .padding(.vertical, 4)
                 }
-                .padding(.vertical, 4)
-            }
+                .accessibilityIdentifier("settings-delete-account-button")
+            .accessibilityLabel("Delete account")
+            .accessibilityHint("Permanently deletes your account")
         } header: {
             Text("Danger Zone")
                 .foregroundColor(.red)

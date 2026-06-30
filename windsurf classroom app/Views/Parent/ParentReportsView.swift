@@ -203,6 +203,7 @@ struct ParentReportsView: View {
                         .foregroundColor(week.totalPoints >= 0 ? .green : .red)
                 }
                 .padding(.vertical, 8)
+                .accessibilityLabel("Week \(week.dateRange), \(week.totalPoints) points")
                 
                 if week.id != viewModel.previousWeeks.last?.id {
                     Divider()
@@ -248,6 +249,7 @@ struct ParentReportsView: View {
             Image(systemName: "person.crop.circle.badge.questionmark.fill")
                 .font(.system(.largeTitle, design: .default))
                 .foregroundColor(.orange.opacity(0.6))
+                .accessibilityLabel("No child linked")
             
             VStack(spacing: 8) {
                 Text("No Child Linked")
@@ -467,6 +469,7 @@ struct ReportSkeletonCard: View {
                 isAnimating = true
             }
         }
+        .accessibilityHidden(true)
     }
 }
 

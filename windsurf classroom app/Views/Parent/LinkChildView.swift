@@ -50,6 +50,7 @@ struct LinkChildView: View {
                     Button("Cancel") {
                         dismiss()
                     }
+                    .accessibilityLabel("Cancel")
                 }
             }
             .alert("Confirm Link", isPresented: $viewModel.showConfirmation) {
@@ -57,7 +58,7 @@ struct LinkChildView: View {
                 Button("Link", role: .none) {
                     Task {
                         guard let parentId = authViewModel.currentUser?.id else {
-                            viewModel.errorMessage = "Not authenticated"
+                            viewModel.errorMessage = "Not authenticated".localized()
                             return
                         }
                         
@@ -95,6 +96,7 @@ struct LinkChildView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocapitalization(.words)
                     .textContentType(.name)
+                    .accessibilityLabel("Child's name")
             }
             
             Button(action: {
@@ -123,6 +125,8 @@ struct LinkChildView: View {
                 )
             }
             .disabled(viewModel.studentName.isEmpty || viewModel.isSearching)
+            .accessibilityLabel("Search")
+            .accessibilityHint("Searches for matching students")
         }
         .padding(20)
         .background(
@@ -194,6 +198,8 @@ struct LinkChildView: View {
             )
         }
         .buttonStyle(PlainButtonStyle())
+        .accessibilityLabel("\(student.name), student ID \(student.id)")
+        .accessibilityHint("Tap to link this student")
     }
     
     private func errorView(_ message: String) -> some View {
@@ -201,6 +207,7 @@ struct LinkChildView: View {
             Image(systemName: "exclamationmark.triangle.fill")
                 .font(.system(.largeTitle))
                 .foregroundColor(.orange)
+                .accessibilityLabel("Error")
             
             Text(message)
                 .font(.body)
@@ -214,6 +221,7 @@ struct LinkChildView: View {
                 viewModel.searchResults = []
             }
             .foregroundColor(.blue)
+            .accessibilityLabel("Try again")
         }
         .padding(.top, 40)
     }
@@ -223,6 +231,7 @@ struct LinkChildView: View {
             Image(systemName: "person.crop.circle.badge.plus")
                 .font(.system(.largeTitle))
                 .foregroundColor(.blue.opacity(0.6))
+                .accessibilityLabel("Link child")
             
             Text("Enter your child's name to find and link their account.")
                 .font(.body)
@@ -348,6 +357,7 @@ struct StudentSearchSkeletonRow: View {
                 isAnimating = true
             }
         }
+        .accessibilityHidden(true)
     }
 }
 

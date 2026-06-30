@@ -20,6 +20,7 @@ struct ParentHomeView: View {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
+                .accessibilityLabel("Home tab")
                 .tag(0)
             
             // Reports Tab
@@ -29,6 +30,7 @@ struct ParentHomeView: View {
                     Image(systemName: "chart.bar.fill")
                     Text("Reports")
                 }
+                .accessibilityLabel("Reports tab")
                 .tag(1)
             
             // Settings Tab
@@ -38,6 +40,7 @@ struct ParentHomeView: View {
                     Image(systemName: "person.fill")
                     Text("Settings")
                 }
+                .accessibilityLabel("Settings tab")
                 .tag(2)
         }
         .accentColor(.purple)

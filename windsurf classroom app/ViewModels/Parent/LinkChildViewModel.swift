@@ -24,14 +24,14 @@ class LinkChildViewModel: ObservableObject {
     @Published var showConfirmation: Bool = false
     @Published var selectedStudent: Student?
     
-    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+    init(supabaseService: SupabaseServiceProtocol = ServiceFactory.makeSupabaseService()) {
         self.supabaseService = supabaseService
     }
     
     /// Searches for students matching the entered name within a class
     func searchStudents() async {
         guard !studentName.isEmpty else {
-            errorMessage = "Please enter your child's name"
+            errorMessage = "Please enter your child's name".localized()
             return
         }
         
@@ -44,12 +44,12 @@ class LinkChildViewModel: ObservableObject {
             searchResults = try await supabaseService.searchStudentsByName(studentName)
             
             if searchResults.isEmpty {
-                errorMessage = "No students found with that name. Please check the spelling or contact your child's teacher."
+                errorMessage = "No students found with that name. Please check the spelling or contact your child's teacher.".localized()
             }
             
         } catch {
             logger.error("Failed to search students: \(error.localizedDescription)")
-            errorMessage = "Unable to search. Please check your connection and try again."
+            errorMessage = "Unable to search. Please check your connection and try again.".localized()
         }
         
         isSearching = false
@@ -64,7 +64,7 @@ class LinkChildViewModel: ObservableObject {
     /// Links the parent to the selected student
     func linkParentToStudent(parentId: UUID) async -> Bool {
         guard let student = selectedStudent else {
-            errorMessage = "No student selected"
+            errorMessage = "No student selected".localized()
             return false
         }
         
@@ -75,13 +75,13 @@ class LinkChildViewModel: ObservableObject {
             try await supabaseService.linkParentToStudent(parentId: parentId, studentId: student.id)
             
             logger.info("Successfully linked parent \(parentId) to student \(student.id)")
-            successMessage = "Successfully linked to \(student.name)!"
+            successMessage = "Successfully linked to %@!".localizedFormat(student.name)
             isLinking = false
             return true
             
         } catch {
             logger.error("Failed to link parent to student: \(error.localizedDescription)")
-            errorMessage = "Unable to link to student. They may already be linked to another parent account."
+            errorMessage = "Unable to link to student. They may already be linked to another parent account.".localized()
             isLinking = false
             return false
         }

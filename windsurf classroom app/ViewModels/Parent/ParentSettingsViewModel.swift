@@ -19,7 +19,7 @@ class ParentSettingsViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     
-    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+    init(supabaseService: SupabaseServiceProtocol = ServiceFactory.makeSupabaseService()) {
         self.supabaseService = supabaseService
     }
     
@@ -37,7 +37,7 @@ class ParentSettingsViewModel: ObservableObject {
             
         } catch {
             logger.error("Failed to fetch children: \(error.localizedDescription)")
-            errorMessage = "Unable to load child information. Please check your connection and try again."
+            errorMessage = "Unable to load child information. Please check your connection and try again.".localized()
         }
         
         isLoading = false
@@ -62,7 +62,7 @@ class ParentSettingsViewModel: ObservableObject {
             
         } catch {
             logger.error("Failed to fetch notification preferences: \(error.localizedDescription)")
-            errorMessage = "Unable to load notification preferences. Please check your connection and try again."
+            errorMessage = "Unable to load notification preferences. Please check your connection and try again.".localized()
         }
         
         isLoading = false
@@ -80,7 +80,7 @@ class ParentSettingsViewModel: ObservableObject {
             logger.info("Notification preferences updated successfully")
         } catch {
             logger.error("Failed to update notification preferences: \(error.localizedDescription)")
-            errorMessage = "Unable to save notification preferences. Please try again."
+            errorMessage = "Unable to save notification preferences. Please try again.".localized()
         }
         
         isLoading = false
@@ -97,7 +97,7 @@ class ParentSettingsViewModel: ObservableObject {
             logger.info("Successfully unlinked child: \(child.name)")
         } catch {
             logger.error("Failed to unlink child: \(error.localizedDescription)")
-            errorMessage = "Unable to unlink child. Please try again."
+            errorMessage = "Unable to unlink child. Please try again.".localized()
         }
         
         isLoading = false
@@ -114,7 +114,7 @@ class ParentSettingsViewModel: ObservableObject {
             logger.info("Account deleted successfully for user: \(userId)")
         } catch {
             logger.error("Failed to delete account: \(error.localizedDescription)")
-            errorMessage = "Unable to delete account. Please try again."
+            errorMessage = "Unable to delete account. Please try again.".localized()
             isLoading = false
             throw error
         }

@@ -19,7 +19,6 @@ struct ParentFeedView: View {
                     .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
-                    // Three state handling: Loading, Error, Empty/NoChild, Content
                     if viewModel.isLoading {
                         loadingView
                     } else if let errorMessage = viewModel.errorMessage {
@@ -79,6 +78,7 @@ struct ParentFeedView: View {
                                 isNew: viewModel.isNewEvent(event)
                             )
                             .padding(.horizontal, 16)
+                            .accessibilityIdentifier("parent-event-row-\(event.id.uuidString)")
                         }
                     } header: {
                         DateSeparator(date: dayGroup.date)
@@ -200,6 +200,7 @@ struct ParentFeedView: View {
             
             Spacer()
         }
+        .accessibilityIdentifier("parent-feed-loading")
     }
     
     private func errorView(_ message: String) -> some View {
@@ -214,6 +215,7 @@ struct ParentFeedView: View {
                 }
             }
         )
+        .accessibilityIdentifier("parent-feed-error")
     }
     
     private var emptyStateView: some View {
@@ -229,6 +231,7 @@ struct ParentFeedView: View {
                         endPoint: .bottomTrailing
                     )
                 )
+                .accessibilityLabel("No events")
             
             VStack(spacing: 8) {
                 Text("No Events Yet")
@@ -246,6 +249,7 @@ struct ParentFeedView: View {
             
             Spacer()
         }
+        .accessibilityIdentifier("parent-feed-empty")
     }
     
     private var noChildView: some View {
@@ -255,6 +259,7 @@ struct ParentFeedView: View {
             Image(systemName: "person.crop.circle.badge.questionmark.fill")
                 .font(.system(.largeTitle, design: .default))
                 .foregroundColor(.orange.opacity(0.6))
+                .accessibilityLabel("No child linked")
             
             VStack(spacing: 8) {
                 Text("No Child Linked")
@@ -287,9 +292,12 @@ struct ParentFeedView: View {
             }
             .padding(.horizontal, 32)
             .padding(.top, 16)
+            .accessibilityLabel("Link your child")
+            .accessibilityIdentifier("parent-link-child-button")
             
             Spacer()
         }
+        .accessibilityIdentifier("parent-no-child")
     }
 }
 
@@ -360,6 +368,7 @@ struct EventRow: View {
             RoundedRectangle(cornerRadius: 12, style: .continuous)
                 .stroke(isNew ? Color.blue.opacity(0.3) : Color.clear, lineWidth: 2)
         )
+        .accessibilityLabel("\(event.category), \(event.isPositive ? "positive" : "negative"), \(event.points) points at \(timeFormatter.string(from: event.createdAt))")
     }
 }
 
@@ -394,6 +403,7 @@ struct DateSeparator: View {
                 .fill(Color.gray.opacity(0.2))
                 .frame(height: 1)
         }
+        .accessibilityHidden(true)
     }
 }
 
@@ -503,6 +513,7 @@ struct EventSkeletonRow: View {
                 isAnimating = true
             }
         }
+        .accessibilityHidden(true)
     }
 }
 
