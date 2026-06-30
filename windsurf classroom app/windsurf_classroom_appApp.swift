@@ -11,7 +11,8 @@ import SwiftUI
 struct WindsurfClassroomApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var authViewModel = AuthViewModel()
-    
+    @StateObject private var networkMonitor = NetworkMonitor.shared
+
     var body: some Scene {
         WindowGroup {
             AppRouter()
