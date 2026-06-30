@@ -30,7 +30,7 @@ class LogBehaviorViewModel: ObservableObject {
     // Callback for optimistic UI updates
     var onOptimisticUpdate: ((UUID, Int) -> Void)?
     
-    init(teacherId: UUID, classId: UUID, behaviorService: BehaviorServiceProtocol = BehaviorService(), categoryService: CategoryServiceProtocol = CategoryService()) {
+    init(teacherId: UUID, classId: UUID, behaviorService: BehaviorServiceProtocol = ServiceFactory.makeBehaviorService(), categoryService: CategoryServiceProtocol = ServiceFactory.makeCategoryService()) {
         self.teacherId = teacherId
         self.classId = classId
         self.behaviorService = behaviorService
@@ -52,7 +52,7 @@ class LogBehaviorViewModel: ObservableObject {
             categories = allCategories.filter { $0.isPositive == isPositive }
         } catch {
             // Provide user-friendly error message without exposing raw Supabase errors
-            errorMessage = "Unable to load categories. Using default options."
+            errorMessage = "Unable to load categories. Using default options.".localized()
             // Fall back to default categories
             categories = isPositive ? 
                 BehaviorCategory.defaultPositiveCategories : 
@@ -74,7 +74,7 @@ class LogBehaviorViewModel: ObservableObject {
     
     func logEvent(for student: Student) async {
         guard let selectedCategory = selectedCategory else {
-            errorMessage = "Please select a behavior category"
+            errorMessage = "Please select a behavior category".localized()
             return
         }
         
@@ -105,7 +105,7 @@ class LogBehaviorViewModel: ObservableObject {
         } catch {
             logger.error("Failed to log behavior event: \(error.localizedDescription)")
             // Provide user-friendly error message without exposing raw Supabase errors
-            errorMessage = "Unable to log behavior. Please check your connection and try again."
+            errorMessage = "Unable to log behavior. Please check your connection and try again.".localized()
             // Rollback optimistic update on error
             onOptimisticUpdate?(student.id, student.pointTotal)
         }

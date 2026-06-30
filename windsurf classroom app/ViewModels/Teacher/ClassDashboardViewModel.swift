@@ -25,7 +25,7 @@ class ClassDashboardViewModel: ObservableObject {
     private var classId: UUID?
     private var teacherId: UUID?
     
-    init(classId: UUID?, teacherId: UUID? = nil, studentService: StudentServiceProtocol = StudentService(), supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+    init(classId: UUID?, teacherId: UUID? = nil, studentService: StudentServiceProtocol = ServiceFactory.makeStudentService(), supabaseService: SupabaseServiceProtocol = ServiceFactory.makeSupabaseService()) {
         self.studentService = studentService
         self.supabaseService = supabaseService
         self.classId = classId
@@ -54,7 +54,7 @@ class ClassDashboardViewModel: ObservableObject {
         errorMessage = nil
         
         guard let classId = classId else {
-            errorMessage = "No classroom assigned. Please contact support."
+            errorMessage = "No classroom assigned. Please contact support.".localized()
             isLoading = false
             students = []
             return
@@ -64,7 +64,7 @@ class ClassDashboardViewModel: ObservableObject {
             students = try await studentService.fetchStudents(classId: classId)
         } catch {
             // Provide user-friendly error message without exposing raw Supabase errors
-            errorMessage = "Unable to load students. Please check your connection and try again."
+            errorMessage = "Unable to load students. Please check your connection and try again.".localized()
             students = []
         }
         
@@ -156,7 +156,7 @@ class ClassDashboardViewModel: ObservableObject {
             }
         } catch {
             logger.error("Failed to fetch class by teacherId: \(error.localizedDescription)")
-            errorMessage = "Unable to load classroom. Please check your connection and try again."
+            errorMessage = "Unable to load classroom. Please check your connection and try again.".localized()
             isLoading = false
             students = []
         }

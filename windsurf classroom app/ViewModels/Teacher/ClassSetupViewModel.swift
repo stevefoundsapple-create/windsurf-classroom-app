@@ -21,7 +21,7 @@ class ClassSetupViewModel: ObservableObject {
     @Published var generatedClassCode: String?
     private var teacherId: UUID?
     
-    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+    init(supabaseService: SupabaseServiceProtocol = ServiceFactory.makeSupabaseService()) {
         self.supabaseService = supabaseService
     }
     
@@ -48,7 +48,7 @@ class ClassSetupViewModel: ObservableObject {
             let trimmedName = className.trimmingCharacters(in: .whitespaces)
             
             guard !trimmedName.isEmpty else {
-                errorMessage = "Please enter a class name"
+                errorMessage = "Please enter a class name".localized()
                 isLoading = false
                 return nil
             }
@@ -62,7 +62,7 @@ class ClassSetupViewModel: ObservableObject {
                 teacherId = sessionUserId
             } else {
                 logger.error("No active session found when creating class")
-                errorMessage = "Authentication error. Please sign in again."
+                errorMessage = "Authentication error. Please sign in again.".localized()
                 isLoading = false
                 return nil
             }
@@ -108,12 +108,12 @@ class ClassSetupViewModel: ObservableObject {
             
         } catch let error as PostgrestError {
             logger.error("PostgrestError - Failed to create class: \(error.message)")
-            errorMessage = "Database error: \(error.message)"
+            errorMessage = "Database error: %@".localizedFormat(error.message)
             isLoading = false
             return nil
         } catch {
             logger.error("Failed to create class: \(error.localizedDescription)")
-            errorMessage = "Failed to create class. Please try again."
+            errorMessage = "Failed to create class. Please try again.".localized()
             isLoading = false
             return nil
         }

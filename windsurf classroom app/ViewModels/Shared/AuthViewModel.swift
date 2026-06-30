@@ -20,7 +20,7 @@ class AuthViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var currentUser: UserProfile?
     
-    init(authService: AuthServiceProtocol = AuthService()) {
+    init(authService: AuthServiceProtocol = ServiceFactory.makeAuthService()) {
         self.authService = authService
         checkExistingSession()
     }
@@ -45,13 +45,13 @@ class AuthViewModel: ObservableObject {
             }
         } catch let error as Auth.AuthError {
             logger.error("Auth error during sign in: \(error.localizedDescription)")
-            errorMessage = "Unable to sign in. Please check your email and password and try again."
+            errorMessage = "Unable to sign in. Please check your email and password and try again.".localized()
         } catch let error as PostgrestError {
             logger.error("Database error during profile fetch: \(error.message)")
-            errorMessage = "Signed in but failed to load profile. Please contact support."
+            errorMessage = "Signed in but failed to load profile. Please contact support.".localized()
         } catch {
             logger.error("Unexpected error during sign in: \(String(describing: error))")
-            errorMessage = "Unable to sign in. Please check your email and password and try again."
+            errorMessage = "Unable to sign in. Please check your email and password and try again.".localized()
         }
         
         isLoading = false
@@ -67,7 +67,7 @@ class AuthViewModel: ObservableObject {
             try await authService.signOut()
             currentUser = nil
         } catch {
-            errorMessage = "Logout failed: \(error.localizedDescription)"
+            errorMessage = "Logout failed: %@".localizedFormat(error.localizedDescription)
         }
     }
     

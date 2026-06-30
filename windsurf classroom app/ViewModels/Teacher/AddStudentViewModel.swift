@@ -20,7 +20,7 @@ class AddStudentViewModel: ObservableObject {
     
     let classId: UUID
     
-    init(classId: UUID, studentService: StudentServiceProtocol = StudentService()) {
+    init(classId: UUID, studentService: StudentServiceProtocol = ServiceFactory.makeStudentService()) {
         self.classId = classId
         self.studentService = studentService
     }
@@ -54,7 +54,7 @@ class AddStudentViewModel: ObservableObject {
             return true
         } catch {
             logger.error("Failed to add student: \(error.localizedDescription)")
-            errorMessage = "Failed to add student. Please try again."
+            errorMessage = "Failed to add student. Please try again.".localized()
             isLoading = false
             return false
         }

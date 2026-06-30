@@ -24,22 +24,17 @@ struct StudentProfileView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Modern background
                 Color(.systemGroupedBackground)
                     .ignoresSafeArea()
                 
                 ScrollView {
                     VStack(spacing: 24) {
-                        // Student Header Card
                         studentHeaderCard
                         
-                        // Stats Overview
                         statsOverview
                         
-                        // Filter Buttons
                         filterButtons
                         
-                        // Events Feed
                         eventsFeed
                     }
                     .padding(.horizontal, 20)
@@ -54,6 +49,7 @@ struct StudentProfileView: View {
                         dismiss()
                     }
                     .fontWeight(.medium)
+                    .accessibilityLabel("Done")
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -61,6 +57,7 @@ struct StudentProfileView: View {
                         Image(systemName: "arrow.clockwise")
                             .font(.title2)
                     }
+                    .accessibilityLabel("Refresh events")
                 }
             }
             .refreshable {
@@ -72,7 +69,6 @@ struct StudentProfileView: View {
                     teacherId: teacherId,
                     classId: classId,
                     onOptimisticUpdate: { _, _ in
-                        // Handle optimistic updates if needed
                         viewModel.refreshEvents()
                     }
                 )
@@ -83,7 +79,6 @@ struct StudentProfileView: View {
     private var studentHeaderCard: some View {
         VStack(spacing: 16) {
             HStack(spacing: 16) {
-                // Enhanced avatar
                 ZStack {
                     Circle()
                         .fill(LinearGradient(
@@ -120,7 +115,6 @@ struct StudentProfileView: View {
                         
                         Spacer()
                         
-                        // Status indicator
                         VStack(spacing: 4) {
                             Image(systemName: student.pointTotal >= 0 ? "star.fill" : "exclamationmark.triangle.fill")
                                 .font(.title3)
@@ -137,7 +131,6 @@ struct StudentProfileView: View {
                 Spacer()
             }
             
-            // Log Behavior Button
             Button(action: viewModel.showLogBehaviorSheet) {
                 HStack {
                     Image(systemName: "plus.circle.fill")
@@ -162,6 +155,8 @@ struct StudentProfileView: View {
                 .foregroundColor(.white)
             }
             .buttonStyle(PlainButtonStyle())
+            .accessibilityLabel("Log behavior")
+            .accessibilityHint("Opens the behavior logging form")
         }
         .padding(20)
         .background(
@@ -222,7 +217,7 @@ struct StudentProfileView: View {
                             viewModel.setFilter(filter)
                         }
                     }) {
-                        Text(filter.rawValue)
+                        Text(filter.localizedDisplayName)
                             .font(.subheadline)
                             .fontWeight(.medium)
                             .padding(.horizontal, 16)
@@ -234,6 +229,7 @@ struct StudentProfileView: View {
                             .foregroundColor(viewModel.filter == filter ? .white : .primary)
                     }
                     .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel("Filter: \(filter.localizedDisplayName)")
                 }
                 
                 Spacer()
@@ -243,7 +239,6 @@ struct StudentProfileView: View {
     
     private var eventsFeed: some View {
         VStack(spacing: 16) {
-            // Three state handling: Loading, Error, Empty, Content
             if viewModel.isLoading {
                 loadingSkeletonView
             } else if let errorMessage = viewModel.errorMessage {
@@ -276,6 +271,7 @@ struct StudentProfileView: View {
             Image(systemName: "exclamationmark.triangle.fill")
                 .font(.title)
                 .foregroundColor(.orange.opacity(0.7))
+                .accessibilityLabel("Error")
             
             VStack(spacing: 8) {
                 Text("Couldn't Load Events")
@@ -306,6 +302,7 @@ struct StudentProfileView: View {
             }
             .buttonStyle(PlainButtonStyle())
             .padding(.top, 8)
+            .accessibilityLabel("Try again")
             
             Spacer()
         }
@@ -318,6 +315,7 @@ struct StudentProfileView: View {
             Image(systemName: "calendar.badge.clock")
                 .font(.largeTitle)
                 .foregroundColor(.gray.opacity(0.6))
+                .accessibilityLabel("No events")
             
             Text("No behavior events")
                 .font(.headline)
@@ -365,6 +363,9 @@ struct StatCard: View {
                 .fill(Color(.systemBackground))
                 .stroke(color.opacity(0.2), lineWidth: 1)
         )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(title)
+        .accessibilityValue("\(value)")
     }
 }
 
@@ -373,7 +374,6 @@ struct BehaviorEventSkeletonItem: View {
     
     var body: some View {
         HStack(spacing: 16) {
-            // Skeleton indicator
             Circle()
                 .fill(Color.gray.opacity(0.3))
                 .frame(width: 44, height: 44)
@@ -395,7 +395,6 @@ struct BehaviorEventSkeletonItem: View {
                 .clipped()
             
             VStack(alignment: .leading, spacing: 8) {
-                // Skeleton category
                 RoundedRectangle(cornerRadius: 4)
                     .fill(Color.gray.opacity(0.3))
                     .frame(width: 120, height: 18)
@@ -416,7 +415,6 @@ struct BehaviorEventSkeletonItem: View {
                     )
                     .clipped()
                 
-                // Skeleton timestamp
                 RoundedRectangle(cornerRadius: 4)
                     .fill(Color.gray.opacity(0.3))
                     .frame(width: 80, height: 12)
@@ -440,7 +438,6 @@ struct BehaviorEventSkeletonItem: View {
             
             Spacer()
             
-            // Skeleton points
             RoundedRectangle(cornerRadius: 8)
                 .fill(Color.gray.opacity(0.3))
                 .frame(width: 50, height: 28)
@@ -472,6 +469,7 @@ struct BehaviorEventSkeletonItem: View {
                 isAnimating = true
             }
         }
+        .accessibilityHidden(true)
     }
 }
 
@@ -485,9 +483,13 @@ struct BehaviorEventFeedItem: View {
         return formatter
     }
     
+    private var accessibilityDescription: String {
+        let time = dateFormatter.string(from: event.createdAt)
+        return "\(event.category), \(event.points) points at \(time)"
+    }
+    
     var body: some View {
         HStack(spacing: 16) {
-            // Event indicator
             ZStack {
                 Circle()
                     .fill(event.isPositive ? Color.green.opacity(0.15) : Color.red.opacity(0.15))
@@ -542,6 +544,7 @@ struct BehaviorEventFeedItem: View {
                 .fill(Color(.systemBackground))
                 .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
         )
+        .accessibilityLabel(accessibilityDescription)
     }
 }
 

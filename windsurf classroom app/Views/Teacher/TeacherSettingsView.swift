@@ -19,6 +19,7 @@ struct TeacherSettingsView: View {
                         Image(systemName: "person.circle.fill")
                             .font(.system(size: 48))
                             .foregroundStyle(.blue)
+                            .accessibilityLabel("Profile icon")
                         
                         VStack(alignment: .leading, spacing: 4) {
                             Text(authViewModel.currentUser?.name ?? "Teacher")
@@ -40,6 +41,9 @@ struct TeacherSettingsView: View {
                     } label: {
                         Label("Sign Out", systemImage: "rectangle.portrait.and.arrow.right")
                     }
+                    .accessibilityIdentifier("teacher-settings-sign-out")
+                    .accessibilityLabel("Sign out")
+                    .accessibilityHint("Logs out of your account")
                 }
             }
             .navigationTitle("Settings")
@@ -49,6 +53,7 @@ struct TeacherSettingsView: View {
                     Button("Done") {
                         dismiss()
                     }
+                    .accessibilityLabel("Done")
                 }
             }
         }

@@ -1,46 +1,54 @@
-//
-//  CategoryService.swift
-//  windsurf classroom app
-//
-//  Created by Max Mokrane on 2026/05/01.
-//
-
 import Foundation
 
 class CategoryService: CategoryServiceProtocol {
     private let supabaseService: SupabaseServiceProtocol
+    private let cache: OfflineCacheService
     
-    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared, cache: OfflineCacheService = .shared) {
         self.supabaseService = supabaseService
+        self.cache = cache
     }
     
     func fetchCategories(classId: UUID) async throws -> [BehaviorCategory] {
+        let key = "categories_\(classId)"
+        
+        if let cached: [BehaviorCategory] = cache.fetch([BehaviorCategory].self, key: key) {
+            return cached
+        }
+        
         do {
             let categories = try await supabaseService.fetchBehaviorCategories(classId: classId)
             
-            // If no categories exist for this class, create default ones
             if categories.isEmpty {
                 try await createDefaultCategories(for: classId)
-                return try await supabaseService.fetchBehaviorCategories(classId: classId)
+                let created = try await supabaseService.fetchBehaviorCategories(classId: classId)
+                cache.cache(created, key: key)
+                return created
             }
             
+            cache.cache(categories, key: key)
             return categories
         } catch {
-            // If there's an error fetching, fall back to default categories
+            if let cached: [BehaviorCategory] = cache.fetch([BehaviorCategory].self, key: key) {
+                return cached
+            }
             return BehaviorCategory.defaultPositiveCategories + BehaviorCategory.defaultNegativeCategories
         }
     }
     
     func createCategory(_ category: BehaviorCategory) async throws {
         try await supabaseService.createBehaviorCategory(category)
+        cache.invalidate(key: "categories_\(category.classId)")
     }
     
     func updateCategory(_ category: BehaviorCategory) async throws {
         try await supabaseService.updateBehaviorCategory(category)
+        cache.invalidate(key: "categories_\(category.classId)")
     }
     
     func deleteCategory(id: UUID) async throws {
         try await supabaseService.deleteBehaviorCategory(id: id)
+        cache.invalidate(key: "categories_")
     }
     
     private func createDefaultCategories(for classId: UUID) async throws {

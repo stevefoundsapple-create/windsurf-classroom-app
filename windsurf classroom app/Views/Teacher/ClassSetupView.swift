@@ -30,6 +30,7 @@ struct ClassSetupView: View {
                     Button("Cancel") {
                         onCancel()
                     }
+                    .accessibilityLabel("Cancel")
                 }
             }
         }
@@ -39,7 +40,6 @@ struct ClassSetupView: View {
         VStack(spacing: 32) {
             Spacer()
             
-            // Header
             VStack(spacing: 12) {
                 Image(systemName: "person.3.fill")
                     .font(.system(size: 64))
@@ -50,6 +50,7 @@ struct ClassSetupView: View {
                             endPoint: .bottomTrailing
                         )
                     )
+                    .accessibilityLabel("Classroom icon")
                 
                 Text("Create Your Classroom")
                     .font(.largeTitle)
@@ -62,7 +63,6 @@ struct ClassSetupView: View {
                     .padding(.horizontal, 32)
             }
             
-            // Form
             VStack(spacing: 20) {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Classroom Name")
@@ -77,6 +77,7 @@ struct ClassSetupView: View {
                             RoundedRectangle(cornerRadius: 12, style: .continuous)
                                 .fill(Color(.systemBackground))
                         )
+                        .accessibilityLabel("Classroom name")
                 }
             }
             .padding(.horizontal, 24)
@@ -91,7 +92,6 @@ struct ClassSetupView: View {
             
             Spacer()
             
-            // Create Button
             Button {
                 Task {
                     if let classId = await viewModel.createClass() {
@@ -119,6 +119,8 @@ struct ClassSetupView: View {
             .disabled(!viewModel.canSubmit)
             .padding(.horizontal, 24)
             .padding(.bottom, 32)
+            .accessibilityLabel("Create Classroom")
+            .accessibilityHint("Creates a new classroom with the entered name")
         }
     }
     
@@ -126,11 +128,11 @@ struct ClassSetupView: View {
         VStack(spacing: 32) {
             Spacer()
             
-            // Success Header
             VStack(spacing: 12) {
                 Image(systemName: "checkmark.circle.fill")
                     .font(.system(size: 64))
                     .foregroundColor(.green)
+                    .accessibilityLabel("Success checkmark")
                 
                 Text("Classroom Created!")
                     .font(.largeTitle)
@@ -143,7 +145,6 @@ struct ClassSetupView: View {
                     .padding(.horizontal, 32)
             }
             
-            // Class Code Display
             VStack(spacing: 16) {
                 VStack(spacing: 8) {
                     Text("Class Code")
@@ -168,6 +169,7 @@ struct ClassSetupView: View {
                 } label: {
                     HStack {
                         Image(systemName: "doc.on.doc")
+                            .accessibilityLabel("Copy icon")
                         Text("Copy Code")
                     }
                     .font(.headline)
@@ -179,12 +181,13 @@ struct ClassSetupView: View {
                             .fill(Color.blue.opacity(0.1))
                     )
                 }
+                .accessibilityLabel("Copy code")
+                .accessibilityHint("Copies the class code to clipboard")
             }
             .padding(.horizontal, 24)
             
             Spacer()
             
-            // Done Button
             Button {
                 onCancel()
             } label: {
@@ -200,6 +203,7 @@ struct ClassSetupView: View {
             }
             .padding(.horizontal, 24)
             .padding(.bottom, 32)
+            .accessibilityLabel("Done")
         }
     }
 }

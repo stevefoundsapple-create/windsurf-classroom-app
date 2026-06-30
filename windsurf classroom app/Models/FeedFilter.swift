@@ -12,6 +12,10 @@ enum FeedFilter: String, CaseIterable {
     case week = "This Week"
     case all = "All Time"
     
+    var localizedDisplayName: String {
+        rawValue.localized()
+    }
+    
     var dateRange: (start: Date, end: Date) {
         let now = Date()
         let calendar = Calendar.current

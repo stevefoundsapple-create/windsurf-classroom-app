@@ -26,6 +26,7 @@ struct AddStudentSheet: View {
                 Section {
                     TextField("Student Name", text: $viewModel.studentName)
                         .autocorrectionDisabled()
+                        .accessibilityLabel("Student name")
                 } header: {
                     Text("Student Information")
                 } footer: {
@@ -47,6 +48,7 @@ struct AddStudentSheet: View {
                     Button("Cancel") {
                         dismiss()
                     }
+                    .accessibilityLabel("Cancel")
                 }
                 
                 ToolbarItem(placement: .confirmationAction) {
@@ -60,6 +62,8 @@ struct AddStudentSheet: View {
                         }
                     }
                     .disabled(!viewModel.canSubmit)
+                    .accessibilityLabel("Add student")
+                    .accessibilityHint("Adds the student to the classroom")
                 }
             }
             .disabled(viewModel.isLoading)
@@ -67,6 +71,7 @@ struct AddStudentSheet: View {
                 if viewModel.isLoading {
                     ProgressView()
                         .scaleEffect(1.2)
+                        .accessibilityLabel("Adding student")
                 }
             }
         }

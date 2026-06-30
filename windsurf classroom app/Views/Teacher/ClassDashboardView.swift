@@ -19,7 +19,6 @@ struct ClassDashboardView: View {
     @State private var createdClassId: UUID?
     
     init() {
-        // Initialize with empty classId - will be updated when authViewModel is available
         _viewModel = StateObject(wrappedValue: ClassDashboardViewModel(classId: nil, teacherId: nil))
     }
     
@@ -30,15 +29,12 @@ struct ClassDashboardView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background gradient following iOS 26 design
                 Color(.systemGroupedBackground)
                     .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
-                    // Header with class info
                     headerView
                     
-                    // Main content with three state handling: Loading, Error, Empty, Content
                     if viewModel.isLoading {
                         loadingView
                     } else if let errorMessage = viewModel.errorMessage {
@@ -66,6 +62,8 @@ struct ClassDashboardView: View {
                                 .font(.headline)
                                 .foregroundColor(.blue)
                         }
+                        .accessibilityLabel("Add student")
+                        .accessibilityHint("Opens a form to add a new student")
                         
                         Button(action: {
                             if authViewModel.currentUser?.classId != nil || createdClassId != nil {
@@ -77,6 +75,7 @@ struct ClassDashboardView: View {
                                 .foregroundColor((authViewModel.currentUser?.classId != nil || createdClassId != nil) ? .blue : .gray.opacity(0.3))
                         }
                         .disabled(authViewModel.currentUser?.classId == nil && createdClassId == nil)
+                        .accessibilityLabel("Show class code")
                         
                         Menu {
                             Button(action: viewModel.refreshStudents) {
@@ -89,6 +88,8 @@ struct ClassDashboardView: View {
                             Image(systemName: "ellipsis.circle")
                                 .font(.title2)
                         }
+                        .accessibilityLabel("More options")
+                        .accessibilityHint("Opens menu with refresh and settings")
                     }
                 }
             }
@@ -124,7 +125,6 @@ struct ClassDashboardView: View {
                     createdClassId = classId
                     viewModel.updateClassId(classId)
                     showingClassSetup = false
-                    // Now show add student sheet
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         showingAddStudent = true
                     }
@@ -141,7 +141,6 @@ struct ClassDashboardView: View {
                 viewModel.refreshStudents()
             }
             .task {
-                // Update classId and teacherId from authViewModel when view appears
                 viewModel.updateClassId(authViewModel.currentUser?.classId)
                 viewModel.updateTeacherId(authViewModel.currentUser?.id)
             }
@@ -164,7 +163,6 @@ struct ClassDashboardView: View {
                 
                 Spacer()
                 
-                // Quick stats
                 VStack(alignment: .trailing, spacing: 4) {
                     Text("\(viewModel.students.reduce(0) { $0 + $1.pointTotal })")
                         .font(.title3)
@@ -185,6 +183,7 @@ struct ClassDashboardView: View {
         .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
         .padding(.horizontal, 16)
         .padding(.top, 8)
+        .accessibilityLabel("Student count and total points summary")
     }
     
     private var loadingView: some View {
@@ -215,6 +214,7 @@ struct ClassDashboardView: View {
                 .foregroundColor(.blue.opacity(0.6))
                 .scaleEffect(1.0)
                 .animation(.easeInOut(duration: 2).repeatForever(autoreverses: true), value: true)
+                .accessibilityLabel("No students")
             
             VStack(spacing: 8) {
                 Text("No Students Yet")
@@ -248,6 +248,7 @@ struct ClassDashboardView: View {
                 .clipShape(Capsule())
             }
             .buttonStyle(PlainButtonStyle())
+            .accessibilityLabel("Add first student")
         }
         .padding(32)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -288,11 +289,11 @@ struct ClassCodeSheet: View {
             VStack(spacing: 32) {
                 Spacer()
                 
-                // Header
                 VStack(spacing: 12) {
                     Image(systemName: "qrcode")
                         .font(.system(size: 64))
                         .foregroundColor(.blue)
+                        .accessibilityLabel("Classroom QR code")
                     
                     Text("Your Class Code")
                         .font(.largeTitle)
@@ -305,7 +306,6 @@ struct ClassCodeSheet: View {
                         .padding(.horizontal, 32)
                 }
                 
-                // Class Code Display
                 VStack(spacing: 16) {
                     Text(classCode)
                         .font(.system(size: 48, weight: .bold, design: .monospaced))
@@ -334,12 +334,12 @@ struct ClassCodeSheet: View {
                                 .fill(Color.blue.opacity(0.1))
                         )
                     }
+                    .accessibilityLabel("Copy code")
                 }
                 .padding(.horizontal, 24)
                 
                 Spacer()
                 
-                // Done Button
                 Button {
                     dismiss()
                 } label: {
@@ -355,6 +355,7 @@ struct ClassCodeSheet: View {
                 }
                 .padding(.horizontal, 24)
                 .padding(.bottom, 32)
+                .accessibilityLabel("Done")
             }
             .navigationTitle("Class Code")
             .navigationBarTitleDisplayMode(.inline)
@@ -363,6 +364,7 @@ struct ClassCodeSheet: View {
                     Button("Close") {
                         dismiss()
                     }
+                    .accessibilityLabel("Close")
                 }
             }
         }
@@ -376,7 +378,6 @@ struct StudentCardView: View {
     
     var body: some View {
         VStack(spacing: 12) {
-            // Student Avatar with modern design
             ZStack {
                 Circle()
                     .fill(LinearGradient(
@@ -393,14 +394,12 @@ struct StudentCardView: View {
                     .foregroundColor(.white)
             }
             
-            // Student Name
             Text(student.name)
                 .font(.headline)
                 .fontWeight(.semibold)
                 .lineLimit(1)
                 .foregroundColor(.primary)
             
-            // Point Total with modern design
             VStack(spacing: 4) {
                 HStack(alignment: .firstTextBaseline, spacing: 2) {
                     Image(systemName: student.pointTotal >= 0 ? "arrow.up.circle.fill" : "arrow.down.circle.fill")
@@ -436,13 +435,15 @@ struct StudentCardView: View {
             minimumDuration: 0.5,
             maximumDistance: 10,
             perform: {
-                // Add haptic feedback for long press
                 let impactFeedback = UIImpactFeedbackGenerator(style: .medium)
                 impactFeedback.impactOccurred()
                 onLongPress()
             }
         )
         .buttonStyle(PlainButtonStyle())
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(student.name), \(student.pointTotal) points")
+        .accessibilityHint("Tap to log behavior, long press for profile")
     }
 }
 
@@ -472,7 +473,6 @@ struct SkeletonCardView: View {
                 )
                 .clipped()
             
-            // Skeleton Name
             RoundedRectangle(cornerRadius: 4)
                 .fill(Color.gray.opacity(0.3))
                 .frame(height: 20)
@@ -493,7 +493,6 @@ struct SkeletonCardView: View {
                 )
                 .clipped()
             
-            // Skeleton Points
             VStack(spacing: 4) {
                 RoundedRectangle(cornerRadius: 4)
                     .fill(Color.gray.opacity(0.3))
@@ -548,6 +547,7 @@ struct SkeletonCardView: View {
                 isAnimating = true
             }
         }
+        .accessibilityHidden(true)
     }
 }
 
@@ -555,7 +555,6 @@ struct SkeletonCardView: View {
     ClassDashboardView()
 }
 
-// Preview helper for StudentCardView
 #Preview("Student Card") {
     VStack {
         StudentCardView(

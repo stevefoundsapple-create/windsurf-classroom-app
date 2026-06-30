@@ -1,0 +1,211 @@
+// MARK: - Shared
+"Classroom Behavior" = "Classroom Behavior";
+"Track behavior in real-time" = "Track behavior in real-time";
+"Email" = "Email";
+"Password" = "Password";
+"Sign In" = "Sign In";
+"Cancel" = "Cancel";
+"Done" = "Done";
+"Try Again" = "Try Again";
+"Close" = "Close";
+"Settings" = "Settings";
+"Error" = "Error";
+"OK" = "OK";
+"Refresh" = "Refresh";
+"Sign Out" = "Sign Out";
+"Search" = "Search";
+"Link Your Child" = "Link Your Child";
+"Delete Account" = "Delete Account";
+"Contact Support" = "Contact Support";
+"Privacy Policy" = "Privacy Policy";
+"Terms of Service" = "Terms of Service";
+"Log Out" = "Log Out";
+"Copy Code" = "Copy Code";
+"Delete" = "Delete";
+"Unlink" = "Unlink";
+"Link" = "Link";
+
+// MARK: - FeedFilter
+"Today" = "Today";
+"This Week" = "This Week";
+"All Time" = "All Time";
+
+// MARK: - LoginView
+"Track behavior in real-time" = "Track behavior in real-time";
+
+// MARK: - ErrorStateView
+"Try Again" = "Try Again";
+
+// MARK: - Teacher Settings
+"Teacher" = "Teacher";
+"Account" = "Account";
+
+// MARK: - ClassSetupView
+"Create Your Classroom" = "Create Your Classroom";
+"Give your classroom a name to get started" = "Give your classroom a name to get started";
+"Classroom Name" = "Classroom Name";
+"e.g., Ms. Smith's 3rd Grade" = "e.g., Ms. Smith's 3rd Grade";
+"Create Classroom" = "Create Classroom";
+"Classroom Created!" = "Classroom Created!";
+"Share this code with your students" = "Share this code with your students";
+"Class Code" = "Class Code";
+
+// MARK: - AddStudentSheet
+"Add Student" = "Add Student";
+"Student Information" = "Student Information";
+"Enter the student's full name as it will appear in the classroom." = "Enter the student's full name as it will appear in the classroom.";
+"Student Name" = "Student Name";
+"Add" = "Add";
+
+// MARK: - ClassDashboardView
+"My Classroom" = "My Classroom";
+"%lld Students" = "%lld Students";
+"Tap any student to log behavior" = "Tap any student to log behavior";
+"Total Points" = "Total Points";
+"Couldn't Load Students" = "Couldn't Load Students";
+"We had trouble loading your classroom. Please check your connection and try again." = "We had trouble loading your classroom. Please check your connection and try again.";
+"No Students Yet" = "No Students Yet";
+"Add students to your classroom to start tracking behavior and building positive habits" = "Add students to your classroom to start tracking behavior and building positive habits";
+"Add First Student" = "Add First Student";
+"Your Class Code" = "Your Class Code";
+"points" = "points";
+
+// MARK: - LogBehaviorSheet
+"Log Behavior" = "Log Behavior";
+"%lld points" = "%lld points";
+"Good" = "Good";
+"Needs Help" = "Needs Help";
+"Behavior Type" = "Behavior Type";
+"Step 1 of 3" = "Step 1 of 3";
+"Positive" = "Positive";
+"Negative" = "Negative";
+"Category" = "Category";
+"Step 2 of 3" = "Step 2 of 3";
+"Note" = "Note";
+"(optional)" = "(optional)";
+"Add context or details..." = "Add context or details...";
+"Confirm" = "Confirm";
+"Step 3 of 3" = "Step 3 of 3";
+
+// MARK: - StudentProfileView
+"Student Profile" = "Student Profile";
+"Excellent" = "Excellent";
+"Needs Support" = "Needs Support";
+"Positive" = "Positive";
+"Negative" = "Negative";
+"Net" = "Net";
+"Behavior History" = "Behavior History";
+"%lld events" = "%lld events";
+"Couldn't Load Events" = "Couldn't Load Events";
+"We had trouble loading the behavior history. Please check your connection and try again." = "We had trouble loading the behavior history. Please check your connection and try again.";
+"No behavior events" = "No behavior events";
+"No behavior has been logged for this student in the selected time period." = "No behavior has been logged for this student in the selected time period.";
+
+// MARK: - ParentFeedView
+"My Child" = "My Child";
+"Unknown" = "Unknown";
+"Today's Activity" = "Today's Activity";
+"points today" = "points today";
+"Couldn't Load Data" = "Couldn't Load Data";
+"No Events Yet" = "No Events Yet";
+"No events logged today yet. Check back later for updates on your child's day!" = "No events logged today yet. Check back later for updates on your child's day!";
+"No Child Linked" = "No Child Linked";
+"Your account is not linked to any student. Search for your child to link your account." = "Your account is not linked to any student. Search for your child to link your account.";
+
+// MARK: - ParentSettingsView
+"Parent Account" = "Parent Account";
+"Child Information" = "Child Information";
+"Student ID: %.8s..." = "Student ID: %.8s...";
+"Contact your child's teacher if you need to update this information." = "Contact your child's teacher if you need to update this information.";
+"Search for your child to link accounts" = "Search for your child to link accounts";
+"App Settings" = "App Settings";
+"Positive Behaviors" = "Positive Behaviors";
+"Get notified when your child earns points" = "Get notified when your child earns points";
+"Negative Behaviors" = "Negative Behaviors";
+"Get notified when your child loses points" = "Get notified when your child loses points";
+"Weekly Summaries" = "Weekly Summaries";
+"Receive a weekly digest of your child's progress" = "Receive a weekly digest of your child's progress";
+"Quiet Hours" = "Quiet Hours";
+"Disable notifications during specific hours" = "Disable notifications during specific hours";
+"Loading preferences..." = "Loading preferences...";
+"Support" = "Support";
+"Danger Zone" = "Danger Zone";
+"Are you sure you want to log out?" = "Are you sure you want to log out?";
+"This will permanently delete your account and all associated data. This action cannot be undone." = "This will permanently delete your account and all associated data. This action cannot be undone.";
+"Unlink Child" = "Unlink Child";
+"Are you sure you want to unlink %@? You will no longer receive notifications for their behavior events." = "Are you sure you want to unlink %@? You will no longer receive notifications for their behavior events.";
+
+// MARK: - ParentReportsView
+"Reports" = "Reports";
+"%lld total points" = "%lld total points";
+"Needs Work" = "Needs Work";
+"Trends" = "Trends";
+"Previous Weeks" = "Previous Weeks";
+"%lld positive, %lld needs work" = "%lld positive, %lld needs work";
+"Couldn't Load Reports" = "Couldn't Load Reports";
+"Your account is not linked to any student. Please contact your child's teacher." = "Your account is not linked to any student. Please contact your child's teacher.";
+
+// MARK: - ParentHomeView
+"Home" = "Home";
+
+// MARK: - LinkChildView
+"Child's Name" = "Child's Name";
+"Enter your child's full name" = "Enter your child's full name";
+"Select your child:" = "Select your child:";
+"Enter your child's name to find and link their account." = "Enter your child's name to find and link their account.";
+"Confirm Link" = "Confirm Link";
+"Are you sure you want to link to %@?" = "Are you sure you want to link to %@?";
+"Success!" = "Success!";
+"Successfully linked to your child." = "Successfully linked to your child.";
+
+// MARK: - StudentSetupView
+"Complete Your Profile" = "Complete Your Profile";
+"Enter your details to get started" = "Enter your details to get started";
+"Your Name" = "Your Name";
+"Class Code" = "Class Code";
+"Enter your full name" = "Enter your full name";
+"Enter your class code" = "Enter your class code";
+"Get Started" = "Get Started";
+
+// MARK: - StudentHomeView
+"My Points" = "My Points";
+"Your Points" = "Your Points";
+"Keep up the great work!" = "Keep up the great work!";
+"You can do better!" = "You can do better!";
+"Your teacher hasn't logged any behavior events yet. Check back soon!" = "Your teacher hasn't logged any behavior events yet. Check back soon!";
+
+// MARK: - ViewModel Error Messages
+"Unable to sign in. Please check your email and password and try again." = "Unable to sign in. Please check your email and password and try again.";
+"Signed in but failed to load profile. Please contact support." = "Signed in but failed to load profile. Please contact support.";
+"Logout failed: %@" = "Logout failed: %@";
+"No classroom assigned. Please contact support." = "No classroom assigned. Please contact support.";
+"Unable to load students. Please check your connection and try again." = "Unable to load students. Please check your connection and try again.";
+"Unable to load classroom. Please check your connection and try again." = "Unable to load classroom. Please check your connection and try again.";
+"Please enter a class name" = "Please enter a class name";
+"Authentication error. Please sign in again." = "Authentication error. Please sign in again.";
+"Database error: %@" = "Database error: %@";
+"Failed to create class. Please try again." = "Failed to create class. Please try again.";
+"Failed to add student. Please try again." = "Failed to add student. Please try again.";
+"Unable to load categories. Using default options." = "Unable to load categories. Using default options.";
+"Please select a behavior category" = "Please select a behavior category";
+"Unable to log behavior. Please check your connection and try again." = "Unable to log behavior. Please check your connection and try again.";
+"Unable to load behavior history. Please check your connection and try again." = "Unable to load behavior history. Please check your connection and try again.";
+"Please enter your child's name" = "Please enter your child's name";
+"No students found with that name. Please check the spelling or contact your child's teacher." = "No students found with that name. Please check the spelling or contact your child's teacher.";
+"Unable to search. Please check your connection and try again." = "Unable to search. Please check your connection and try again.";
+"No student selected" = "No student selected";
+"Unable to link to student. They may already be linked to another parent account." = "Unable to link to student. They may already be linked to another parent account.";
+"Successfully linked to %@!" = "Successfully linked to %@!";
+"Not authenticated" = "Not authenticated";
+"Unable to load your child's data. Please check your connection and try again." = "Unable to load your child's data. Please check your connection and try again.";
+"Unable to load reports. Please check your connection and try again." = "Unable to load reports. Please check your connection and try again.";
+"Unable to load child information. Please check your connection and try again." = "Unable to load child information. Please check your connection and try again.";
+"Unable to load notification preferences. Please check your connection and try again." = "Unable to load notification preferences. Please check your connection and try again.";
+"Unable to save notification preferences. Please try again." = "Unable to save notification preferences. Please try again.";
+"Unable to unlink child. Please try again." = "Unable to unlink child. Please try again.";
+"Unable to delete account. Please try again." = "Unable to delete account. Please try again.";
+"Unable to load your data. Please check your connection and try again." = "Unable to load your data. Please check your connection and try again.";
+"Please enter your name" = "Please enter your name";
+"Please enter a class code" = "Please enter a class code";
+"Invalid class code. Please check with your teacher." = "Invalid class code. Please check with your teacher.";
+"Failed to create profile. Please check your class code and try again." = "Failed to create profile. Please check your class code and try again.";

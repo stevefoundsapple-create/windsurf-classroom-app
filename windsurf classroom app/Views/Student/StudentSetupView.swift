@@ -33,8 +33,10 @@ struct StudentSetupView: View {
                                     .font(.title3)
                                     .foregroundColor(.secondary)
                             }
+                            .accessibilityLabel("Sign out")
                         }
-                        .padding(.horizontal, 16)
+                    }
+                    .padding(.horizontal, 16)
                         
                         Image(systemName: "person.crop.circle.badge.plus")
                             .font(.system(size: 64))
@@ -45,6 +47,7 @@ struct StudentSetupView: View {
                                     endPoint: .bottomTrailing
                                 )
                             )
+                            .accessibilityLabel("Profile setup icon")
                         
                         Text("Complete Your Profile")
                             .font(.largeTitle)
@@ -72,6 +75,8 @@ struct StudentSetupView: View {
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                                         .fill(Color(.systemBackground))
                                 )
+                                .accessibilityLabel("Your name")
+                                .accessibilityIdentifier("setup-name-field")
                         }
                         
                         VStack(alignment: .leading, spacing: 8) {
@@ -88,6 +93,8 @@ struct StudentSetupView: View {
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                                         .fill(Color(.systemBackground))
                                 )
+                                .accessibilityLabel("Class code")
+                                .accessibilityIdentifier("setup-class-code-field")
                         }
                     }
                     .padding(.horizontal, 24)
@@ -98,6 +105,7 @@ struct StudentSetupView: View {
                             .foregroundColor(.red)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, 32)
+                            .accessibilityIdentifier("setup-error-message")
                     }
                     
                     Spacer()
@@ -128,6 +136,9 @@ struct StudentSetupView: View {
                     .disabled(!viewModel.canSubmit)
                     .padding(.horizontal, 24)
                     .padding(.bottom, 32)
+                    .accessibilityLabel("Get started")
+                    .accessibilityHint("Creates your student profile")
+                    .accessibilityIdentifier("setup-get-started-button")
                 }
             }
             .navigationBarHidden(true)
@@ -138,7 +149,6 @@ struct StudentSetupView: View {
             }
         }
     }
-}
 
 #Preview {
     StudentSetupView(userId: UUID(), onComplete: {}, onSignOut: {})

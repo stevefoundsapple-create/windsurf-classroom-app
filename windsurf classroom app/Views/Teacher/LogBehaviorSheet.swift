@@ -26,30 +26,23 @@ struct LogBehaviorSheet: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Modern background
                 Color(.systemGroupedBackground)
                     .ignoresSafeArea()
                 
                 ScrollView {
                     VStack(spacing: 24) {
-                        // Student Info Header - Enhanced
                         studentHeader
                         
-                        // Positive/Negative Toggle - Modern iOS 26 design
                         behaviorTypeToggle
                         
-                        // Category Chips - Improved layout
                         categoryChips
                         
-                        // Note Field - Modern text field
                         noteField
                         
-                        // Error Message - Better styling
                         if let errorMessage = viewModel.errorMessage {
                             errorView(errorMessage)
                         }
                         
-                        // Submit Button - Enhanced design
                         submitButton
                     }
                     .padding(.horizontal, 20)
@@ -65,6 +58,7 @@ struct LogBehaviorSheet: View {
                     }
                     .font(.body)
                     .foregroundColor(.red)
+                    .accessibilityLabel("Cancel")
                 }
             }
             .presentationDetents([.medium, .large])
@@ -77,7 +71,6 @@ struct LogBehaviorSheet: View {
     
     private var studentHeader: some View {
         HStack(spacing: 16) {
-            // Enhanced avatar with gradient
             ZStack {
                 Circle()
                     .fill(LinearGradient(
@@ -93,6 +86,7 @@ struct LogBehaviorSheet: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
             }
+            .accessibilityLabel("\(student.name) avatar")
             
             VStack(alignment: .leading, spacing: 6) {
                 Text(student.name)
@@ -114,7 +108,6 @@ struct LogBehaviorSheet: View {
             
             Spacer()
             
-            // Quick status indicator
             VStack(spacing: 4) {
                 Image(systemName: student.pointTotal >= 0 ? "checkmark.circle.fill" : "exclamationmark.triangle.fill")
                     .font(.title3)
@@ -125,6 +118,7 @@ struct LogBehaviorSheet: View {
                     .fontWeight(.medium)
                     .foregroundColor(student.pointTotal >= 0 ? .green : .orange)
             }
+            .accessibilityLabel("Status: \(student.pointTotal >= 0 ? "Good" : "Needs Help")")
         }
         .padding(20)
         .background(
@@ -174,6 +168,7 @@ struct LogBehaviorSheet: View {
                     .foregroundColor(viewModel.isPositive ? .white : .primary)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .accessibilityLabel("Positive behavior")
                 
                 Button(action: {
                     withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
@@ -195,6 +190,7 @@ struct LogBehaviorSheet: View {
                     .foregroundColor(!viewModel.isPositive ? .white : .primary)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .accessibilityLabel("Negative behavior")
             }
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .overlay(
@@ -225,7 +221,6 @@ struct LogBehaviorSheet: View {
             }
             
             if viewModel.isLoadingCategories {
-                // Skeleton loader for categories
                 LazyVGrid(columns: [
                     GridItem(.adaptive(minimum: 140), spacing: 12)
                 ], spacing: 12) {
@@ -275,6 +270,7 @@ struct LogBehaviorSheet: View {
                         .stroke(Color(.systemGray4), lineWidth: 1)
                 )
                 .lineLimit(3...6)
+                .accessibilityLabel("Note")
             
             Spacer()
         }
@@ -326,20 +322,17 @@ struct LogBehaviorSheet: View {
             }
             
             Button(action: {
-                // Add haptic feedback
                 let impactFeedback = UIImpactFeedbackGenerator(style: .medium)
                 impactFeedback.impactOccurred()
                 
                 Task {
                     await viewModel.logEvent(for: student)
                     if viewModel.errorMessage == nil {
-                        // Success haptic feedback
                         let notificationFeedback = UINotificationFeedbackGenerator()
                         notificationFeedback.notificationOccurred(.success)
                         
                         dismiss()
                     } else {
-                        // Error haptic feedback
                         let notificationFeedback = UINotificationFeedbackGenerator()
                         notificationFeedback.notificationOccurred(.error)
                     }
@@ -383,6 +376,8 @@ struct LogBehaviorSheet: View {
             .opacity(viewModel.canSubmit ? 1.0 : 0.6)
             .scaleEffect(viewModel.canSubmit ? 1.0 : 0.98)
             .animation(.spring(response: 0.3, dampingFraction: 0.7), value: viewModel.canSubmit)
+            .accessibilityLabel("Log behavior")
+            .accessibilityHint("Submits the behavior event")
         }
     }
 }
@@ -392,7 +387,6 @@ struct CategorySkeletonChip: View {
     
     var body: some View {
         VStack(spacing: 8) {
-            // Skeleton label
             RoundedRectangle(cornerRadius: 4)
                 .fill(Color.gray.opacity(0.3))
                 .frame(height: 16)
@@ -413,7 +407,6 @@ struct CategorySkeletonChip: View {
                 )
                 .clipped()
             
-            // Skeleton points
             RoundedRectangle(cornerRadius: 4)
                 .fill(Color.gray.opacity(0.3))
                 .frame(width: 40, height: 12)
@@ -447,6 +440,7 @@ struct CategorySkeletonChip: View {
                 isAnimating = true
             }
         }
+        .accessibilityHidden(true)
     }
 }
 
@@ -512,6 +506,8 @@ struct CategoryChip: View {
             .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isSelected)
         }
         .buttonStyle(PlainButtonStyle())
+        .accessibilityLabel("\(category.label), \(category.points) points")
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 }
 

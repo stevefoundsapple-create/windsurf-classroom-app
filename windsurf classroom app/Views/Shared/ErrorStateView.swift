@@ -25,6 +25,7 @@ struct ErrorStateView: View {
                         endPoint: .bottomTrailing
                     )
                 )
+                .accessibilityLabel("Error icon")
             
             VStack(spacing: 12) {
                 Text(title)
@@ -32,6 +33,7 @@ struct ErrorStateView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.center)
+                    .accessibilityIdentifier("error-title")
                 
                 Text(message)
                     .font(.body)
@@ -39,6 +41,7 @@ struct ErrorStateView: View {
                     .multilineTextAlignment(.center)
                     .lineLimit(4)
                     .padding(.horizontal, 32)
+                    .accessibilityIdentifier("error-message")
             }
             
             Button(action: retryAction) {
@@ -61,6 +64,9 @@ struct ErrorStateView: View {
             .buttonStyle(PlainButtonStyle())
             .padding(.horizontal, 40)
             .padding(.top, 8)
+            .accessibilityIdentifier("error-retry-button")
+            .accessibilityLabel("Try again")
+            .accessibilityHint("Retries the failed operation")
             
             Spacer()
         }

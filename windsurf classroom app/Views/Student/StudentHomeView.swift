@@ -20,6 +20,7 @@ struct StudentHomeView: View {
                 // Four state handling: Setup, Loading, Error, Empty, Content
                 if viewModel.needsSetup {
                     setupView
+                        .accessibilityIdentifier("student-setup")
                 } else if viewModel.isLoading {
                     loadingView
                 } else if let errorMessage = viewModel.errorMessage {
@@ -50,6 +51,7 @@ struct StudentHomeView: View {
                     } label: {
                         Label("Refresh", systemImage: "arrow.clockwise")
                     }
+                    .accessibilityLabel("Refresh")
 
                     Button {
                         Task {
@@ -58,10 +60,12 @@ struct StudentHomeView: View {
                     } label: {
                         Label("Sign Out", systemImage: "arrow.right.square")
                     }
+                    .accessibilityLabel("Sign out")
                 } label: {
                     Image(systemName: "ellipsis.circle")
                         .font(.title2)
                 }
+                .accessibilityLabel("More options")
             }
         }
         .task {
@@ -96,6 +100,7 @@ struct StudentHomeView: View {
             }
             .padding(.bottom, 20)
         }
+        .accessibilityIdentifier("student-content")
         .refreshable {
             if let userId = authViewModel.currentUser?.id {
                 await viewModel.fetchEvents(userId: userId)
@@ -131,6 +136,10 @@ struct StudentHomeView: View {
                 .fill(Color(.systemBackground))
                 .shadow(color: .black.opacity(0.08), radius: 16, x: 0, y: 6)
         )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Your points")
+        .accessibilityValue("\(viewModel.pointTotal) points")
+        .accessibilityIdentifier("student-point-total")
     }
     
     private var loadingView: some View {
@@ -165,6 +174,7 @@ struct StudentHomeView: View {
             
             Spacer()
         }
+        .accessibilityIdentifier("student-loading")
     }
     
     private var setupView: some View {
@@ -195,6 +205,7 @@ struct StudentHomeView: View {
                 }
             }
         )
+        .accessibilityIdentifier("student-error")
     }
     
     private var emptyStateView: some View {
@@ -210,6 +221,7 @@ struct StudentHomeView: View {
                         endPoint: .bottomTrailing
                     )
                 )
+                .accessibilityLabel("No events")
             
             VStack(spacing: 8) {
                 Text("No Events Yet")
@@ -227,6 +239,7 @@ struct StudentHomeView: View {
             
             Spacer()
         }
+        .accessibilityIdentifier("student-empty")
     }
 }
 
@@ -291,6 +304,9 @@ struct StudentEventRow: View {
                 .fill(Color(.systemBackground))
                 .shadow(color: .black.opacity(0.05), radius: 8, x: 0, y: 2)
         )
+        .accessibilityLabel("\(event.category), \(event.points) points")
+        .accessibilityHint("Behavior event at \(timeFormatter.string(from: event.createdAt))")
+        .accessibilityIdentifier("student-event-row-\(event.id.uuidString)")
     }
 }
 
@@ -322,6 +338,7 @@ struct ConfettiView: View {
                 animateParticles(in: geometry.size)
             }
             .allowsHitTesting(false)
+            .accessibilityHidden(true)
         }
     }
     
@@ -465,6 +482,7 @@ struct StudentEventSkeletonRow: View {
                 isAnimating = true
             }
         }
+        .accessibilityHidden(true)
     }
 }
 

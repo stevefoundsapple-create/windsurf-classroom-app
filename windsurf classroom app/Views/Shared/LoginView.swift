@@ -19,6 +19,7 @@ struct LoginView: View {
                 Image(systemName: "graduationcap.fill")
                     .font(.largeTitle)
                     .foregroundColor(.blue)
+                    .accessibilityLabel("Classroom Behavior app logo")
                 
                 Text("Classroom Behavior")
                     .font(.largeTitle)
@@ -35,9 +36,13 @@ struct LoginView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocapitalization(.none)
                     .keyboardType(.emailAddress)
+                    .accessibilityIdentifier("login-email-field")
+                    .accessibilityLabel("Email address")
                 
                 SecureField("Password", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .accessibilityIdentifier("login-password-field")
+                    .accessibilityLabel("Password")
                 
                 Button(action: {
                     Task {
@@ -57,6 +62,9 @@ struct LoginView: View {
                 .foregroundColor(.white)
                 .cornerRadius(8)
                 .disabled(email.isEmpty || password.isEmpty || authViewModel.isLoading)
+                .accessibilityIdentifier("login-sign-in-button")
+                .accessibilityLabel("Sign in")
+                .accessibilityHint("Authenticates with your email and password")
             }
             
             // Error Message
@@ -66,6 +74,7 @@ struct LoginView: View {
                     .font(.caption)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
+                    .accessibilityIdentifier("login-error-message")
             }
             
             Spacer()

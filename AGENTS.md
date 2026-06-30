@@ -22,7 +22,7 @@ iOS SwiftUI app (MVVM) + Supabase backend for real-time classroom behavior track
 
 | Layer | Directory |
 |---|---|
-| Models | `Models/` — 8 files: `UserProfile`, `Student`, `BehaviorEvent`, `BehaviorCategory`, `Class`, `FeedFilter`, `NotificationPreferences`, `Todo` |
+| Models | `Models/` — 7 files: `UserProfile`, `Student`, `BehaviorEvent`, `BehaviorCategory`, `Class`, `FeedFilter`, `NotificationPreferences` |
 | Services | `Services/` — 7 files: `SupabaseService` (shared singleton, wraps all DB ops), `AuthService`, `BehaviorService`, `StudentService`, `CategoryService`, `NotificationService`, `Supabase` (legacy global client) |
 | ViewModels | `ViewModels/{Shared,Teacher,Parent,Student}/` |
 | Views | `Views/{Shared,Teacher,Parent,Student}/` |

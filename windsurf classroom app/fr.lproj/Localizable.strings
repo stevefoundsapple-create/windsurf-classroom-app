@@ -1,0 +1,142 @@
+// MARK: - Shared
+"Classroom Behavior" = "Comportement en Classe";
+"Track behavior in real-time" = "Suivez le comportement en temps réel";
+"Email" = "E-mail";
+"Password" = "Mot de passe";
+"Sign In" = "Connexion";
+"Cancel" = "Annuler";
+"Done" = "Terminé";
+"Try Again" = "Réessayer";
+"Close" = "Fermer";
+"Settings" = "Paramètres";
+"Error" = "Erreur";
+"OK" = "OK";
+"Refresh" = "Actualiser";
+"Sign Out" = "Déconnexion";
+"Search" = "Rechercher";
+"Link Your Child" = "Lier votre enfant";
+"Delete Account" = "Supprimer le compte";
+"Contact Support" = "Contacter le support";
+"Privacy Policy" = "Politique de confidentialité";
+"Terms of Service" = "Conditions d'utilisation";
+"Log Out" = "Déconnexion";
+"Copy Code" = "Copier le code";
+"Delete" = "Supprimer";
+"Unlink" = "Dissocier";
+"Link" = "Lier";
+
+// MARK: - FeedFilter
+"Today" = "Aujourd'hui";
+"This Week" = "Cette semaine";
+"All Time" = "Tout le temps";
+
+// MARK: - Teacher Settings
+"Teacher" = "Enseignant";
+"Account" = "Compte";
+
+// MARK: - ClassSetupView
+"Create Your Classroom" = "Créez votre classe";
+"Give your classroom a name to get started" = "Donnez un nom à votre classe pour commencer";
+"Classroom Name" = "Nom de la classe";
+"e.g., Ms. Smith's 3rd Grade" = "ex. CM1 de Mme Dupont";
+"Create Classroom" = "Créer la classe";
+"Classroom Created!" = "Classe créée !";
+"Share this code with your students" = "Partagez ce code avec vos élèves";
+"Class Code" = "Code de la classe";
+
+// MARK: - AddStudentSheet
+"Add Student" = "Ajouter un élève";
+"Student Information" = "Informations de l'élève";
+"Enter the student's full name as it will appear in the classroom." = "Saisissez le nom complet de l'élève tel qu'il apparaîtra dans la classe.";
+"Student Name" = "Nom de l'élève";
+"Add" = "Ajouter";
+
+// MARK: - ClassDashboardView
+"My Classroom" = "Ma classe";
+"Tap any student to log behavior" = "Appuyez sur un élève pour enregistrer un comportement";
+"Total Points" = "Points totaux";
+"Couldn't Load Students" = "Impossible de charger les élèves";
+"No Students Yet" = "Aucun élève pour le moment";
+"Add First Student" = "Ajouter un premier élève";
+"Your Class Code" = "Votre code de classe";
+"points" = "points";
+
+// MARK: - LogBehaviorSheet
+"Log Behavior" = "Enregistrer un comportement";
+"Good" = "Bien";
+"Needs Help" = "A besoin d'aide";
+"Behavior Type" = "Type de comportement";
+"Step 1 of 3" = "Étape 1 sur 3";
+"Positive" = "Positif";
+"Negative" = "Négatif";
+"Category" = "Catégorie";
+"Step 2 of 3" = "Étape 2 sur 3";
+"Note" = "Note";
+"(optional)" = "(facultatif)";
+"Add context or details..." = "Ajoutez un contexte ou des détails...";
+"Confirm" = "Confirmer";
+"Step 3 of 3" = "Étape 3 sur 3";
+
+// MARK: - StudentProfileView
+"Student Profile" = "Profil de l'élève";
+"Excellent" = "Excellent";
+"Needs Support" = "A besoin de soutien";
+"Net" = "Net";
+"Behavior History" = "Historique des comportements";
+"Couldn't Load Events" = "Impossible de charger les événements";
+"No behavior events" = "Aucun événement de comportement";
+
+// MARK: - ParentFeedView
+"My Child" = "Mon enfant";
+"Unknown" = "Inconnu";
+"Today's Activity" = "Activité d'aujourd'hui";
+"Couldn't Load Data" = "Impossible de charger les données";
+"No Events Yet" = "Aucun événement pour le moment";
+"No Child Linked" = "Aucun enfant lié";
+
+// MARK: - ParentSettingsView
+"Parent Account" = "Compte parent";
+"Child Information" = "Informations de l'enfant";
+"App Settings" = "Paramètres de l'app";
+"Positive Behaviors" = "Comportements positifs";
+"Negative Behaviors" = "Comportements négatifs";
+"Weekly Summaries" = "Résumés hebdomadaires";
+"Quiet Hours" = "Heures silencieuses";
+"Support" = "Support";
+"Danger Zone" = "Zone dangereuse";
+
+// MARK: - ParentReportsView
+"Reports" = "Rapports";
+"Needs Work" = "À améliorer";
+"Trends" = "Tendances";
+"Previous Weeks" = "Semaines précédentes";
+
+// MARK: - ParentHomeView
+"Home" = "Accueil";
+
+// MARK: - LinkChildView
+"Child's Name" = "Nom de l'enfant";
+"Confirm Link" = "Confirmer le lien";
+"Success!" = "Succès !";
+
+// MARK: - StudentSetupView
+"Complete Your Profile" = "Complétez votre profil";
+"Enter your details to get started" = "Saisissez vos informations pour commencer";
+"Your Name" = "Votre nom";
+"Enter your full name" = "Saisissez votre nom complet";
+"Enter your class code" = "Saisissez votre code de classe";
+"Get Started" = "Commencer";
+
+// MARK: - StudentHomeView
+"My Points" = "Mes points";
+"Your Points" = "Vos points";
+"Keep up the great work!" = "Continuez votre excellent travail !";
+"You can do better!" = "Vous pouvez faire mieux !";
+
+// MARK: - ViewModel Error Messages
+"Please enter a class name" = "Veuillez saisir un nom de classe";
+"Please select a behavior category" = "Veuillez sélectionner une catégorie de comportement";
+"Please enter your child's name" = "Veuillez saisir le nom de votre enfant";
+"No student selected" = "Aucun élève sélectionné";
+"Please enter your name" = "Veuillez saisir votre nom";
+"Please enter a class code" = "Veuillez saisir un code de classe";

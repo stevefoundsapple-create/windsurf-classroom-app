@@ -20,7 +20,7 @@ class StudentProfileViewModel: ObservableObject {
     
     private let student: Student
     
-    init(student: Student, behaviorService: BehaviorServiceProtocol = BehaviorService()) {
+    init(student: Student, behaviorService: BehaviorServiceProtocol = ServiceFactory.makeBehaviorService()) {
         self.student = student
         self.behaviorService = behaviorService
         fetchEvents()
@@ -46,7 +46,7 @@ class StudentProfileViewModel: ObservableObject {
             }
         } catch {
             // Provide user-friendly error message without exposing raw Supabase errors
-            errorMessage = "Unable to load behavior history. Please check your connection and try again."
+            errorMessage = "Unable to load behavior history. Please check your connection and try again.".localized()
             events = []
         }
         

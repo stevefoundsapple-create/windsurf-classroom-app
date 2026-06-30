@@ -21,7 +21,7 @@ class StudentSetupViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var isComplete: Bool = false
     
-    init(supabaseService: SupabaseServiceProtocol = SupabaseService.shared) {
+    init(supabaseService: SupabaseServiceProtocol = ServiceFactory.makeSupabaseService()) {
         self.supabaseService = supabaseService
     }
     
@@ -41,20 +41,20 @@ class StudentSetupViewModel: ObservableObject {
             let trimmedCode = classCode.trimmingCharacters(in: .whitespaces).uppercased()
             
             guard !trimmedName.isEmpty else {
-                errorMessage = "Please enter your name"
+                errorMessage = "Please enter your name".localized()
                 isLoading = false
                 return
             }
             
             guard !trimmedCode.isEmpty else {
-                errorMessage = "Please enter a class code"
+                errorMessage = "Please enter a class code".localized()
                 isLoading = false
                 return
             }
             
             // Look up class by code
             guard let classObj = try await supabaseService.fetchClassByCode(trimmedCode) else {
-                errorMessage = "Invalid class code. Please check with your teacher."
+                errorMessage = "Invalid class code. Please check with your teacher.".localized()
                 isLoading = false
                 return
             }
@@ -86,7 +86,7 @@ class StudentSetupViewModel: ObservableObject {
             
         } catch {
             logger.error("Failed to create student profile: \(error.localizedDescription)")
-            errorMessage = "Failed to create profile. Please check your class code and try again."
+            errorMessage = "Failed to create profile. Please check your class code and try again.".localized()
         }
         
         isLoading = false
